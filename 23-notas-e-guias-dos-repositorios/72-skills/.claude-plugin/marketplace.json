@@ -1,0 +1,201 @@
+{
+  "name": "72-skills",
+  "owner": {
+    "name": "kawzsilva7-star"
+  },
+  "metadata": {
+    "description": "Skills da Bíblia das Skills, agrupadas por tarefa",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "guia",
+      "description": "Índice: indica qual skill usar para cada tarefa",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./.claude/skills/guia-das-skills"
+      ]
+    },
+    {
+      "name": "planejamento",
+      "description": "Entrevista, brainstorming, protótipo, handoff e planos",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./.claude/skills/grilling",
+        "./.claude/skills/brainstorming",
+        "./.claude/skills/prototype",
+        "./.claude/skills/handoff",
+        "./.claude/skills/writing-plans",
+        "./.claude/skills/executing-plans"
+      ]
+    },
+    {
+      "name": "pagina-de-venda",
+      "description": "Copy, psicologia de vendas, CRO e oferta",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./.claude/skills/copywriting",
+        "./.claude/skills/marketing-psychology",
+        "./.claude/skills/cro",
+        "./.claude/skills/copy-editing",
+        "./.claude/skills/landing-page-conversion-audit",
+        "./.claude/skills/offers"
+      ]
+    },
+    {
+      "name": "design",
+      "description": "Visual, front-end, shadcn e Stitch",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./.claude/skills/frontend-design",
+        "./.claude/skills/design-taste-frontend",
+        "./.claude/skills/shadcn",
+        "./.claude/skills/stitch-design-taste"
+      ]
+    },
+    {
+      "name": "velocidade",
+      "description": "Performance, Core Web Vitals, React e testes no navegador",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./.claude/skills/web-perf",
+        "./.claude/skills/performance",
+        "./.claude/skills/core-web-vitals",
+        "./.claude/skills/vercel-react-best-practices",
+        "./.claude/skills/playwright-cli"
+      ]
+    },
+    {
+      "name": "trafego-pago",
+      "description": "Anúncios, analytics, criativos e conversões",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./.claude/skills/ads",
+        "./.claude/skills/analytics",
+        "./.claude/skills/ad-creative",
+        "./.claude/skills/server-side-conversion-tracking",
+        "./.claude/skills/influencer-marketing"
+      ]
+    },
+    {
+      "name": "seo",
+      "description": "Auditoria de SEO, schema, SEO para IA e páginas em escala",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./.claude/skills/seo-audit",
+        "./.claude/skills/schema",
+        "./.claude/skills/ai-seo",
+        "./.claude/skills/programmatic-seo"
+      ]
+    },
+    {
+      "name": "backend",
+      "description": "Supabase, Stripe, Resend, Firebase e Prisma",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./.claude/skills/supabase-postgres-best-practices",
+        "./.claude/skills/supabase",
+        "./.claude/skills/stripe-best-practices",
+        "./.claude/skills/resend",
+        "./.claude/skills/wizard",
+        "./.claude/skills/firebase-basics",
+        "./.claude/skills/firebase-security-rules-auditor",
+        "./.claude/skills/prisma-client-api"
+      ]
+    },
+    {
+      "name": "deploy",
+      "description": "Publicar na Cloudflare, Vercel ou Prisma Compute",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./.claude/skills/cloudflare",
+        "./.claude/skills/wrangler",
+        "./.claude/skills/deploy-to-vercel",
+        "./.claude/skills/prisma-compute"
+      ]
+    },
+    {
+      "name": "agentes",
+      "description": "Encontrar skills, instruções para agentes, subagentes e navegador",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./.claude/skills/find-skills",
+        "./.claude/skills/writing-for-agents",
+        "./.claude/skills/dispatching-parallel-agents",
+        "./.claude/skills/agent-browser",
+        "./.claude/skills/teach"
+      ]
+    },
+    {
+      "name": "imagem-e-video",
+      "description": "Imagens de marketing, HyperFrames e Remotion",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./.claude/skills/image",
+        "./.claude/skills/hyperframes",
+        "./.claude/skills/media-use",
+        "./.claude/skills/remotion-best-practices",
+        "./.claude/skills/imagegen-frontend-web"
+      ]
+    },
+    {
+      "name": "qualidade",
+      "description": "Depuração, TDD, code review e arquitetura",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./.claude/skills/diagnosing-bugs",
+        "./.claude/skills/tdd",
+        "./.claude/skills/code-review",
+        "./.claude/skills/domain-modeling",
+        "./.claude/skills/codebase-design"
+      ]
+    },
+    {
+      "name": "shopify",
+      "description": "Temas, apps e lojas Shopify",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./.claude/skills/shopify"
+      ]
+    },
+    {
+      "name": "documentos",
+      "description": "Excel, Word, PowerPoint, PDF e textos",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./.claude/skills/xlsx",
+        "./.claude/skills/docx",
+        "./.claude/skills/pptx",
+        "./.claude/skills/pdf",
+        "./.claude/skills/writing-shape"
+      ]
+    },
+    {
+      "name": "economia-de-tokens",
+      "description": "Caveman: respostas curtas, revisão, commits e exploração",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./.claude/skills/caveman",
+        "./.claude/skills/caveman-review",
+        "./.claude/skills/caveman-learn",
+        "./.claude/skills/caveman-explore",
+        "./.claude/skills/caveman-commit"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+/statusline Crie uma barra de status que mostre a porcentagem do contexto já usada nesta conversa, com uma barrinha de progresso. Cores: verde até 50%, amarelo de 50% a 70%, vermelho acima de 70%. Quando estiver vermelho, mostre também a palavra COMPACTA. Mostre ainda o nome do modelo em uso.
+/compact

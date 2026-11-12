@@ -1,0 +1,215 @@
+{
+  "_leia": "Quais skills entram em cada plugin. O script scripts/faxina_plugins.py remonta os plugins a partir da pasta skills/ (igual ao repositorio Skills-para-o-Claude-). Para criar um plugin novo, acrescente um bloco aqui.",
+  "catalogo": "descontos-skills",
+  "plugins": {
+    "pensar-e-analisar": {
+      "descricao": "Pensamento critico e analise para conversas e projetos gerais: atacar uma ideia, prever falhas, decidir, revisar rumo, ler a fundo e passar o bastao",
+      "skills": [
+        "roast",
+        "reflect",
+        "meta-research",
+        "deepread",
+        "capture",
+        "challenge",
+        "stress-test",
+        "hard-call",
+        "postmortem",
+        "handoff",
+        "teach",
+        "find-skills",
+        "ideia-plano-execucao",
+        "espelho-das-conversas",
+        "interview-me"
+      ]
+    },
+    "bancas-do-dono": {
+      "descricao": "Bancas, tribunal e teste de batida: julgar ideia, perfil do Instagram, curriculo para ATS, pagina de vendas e cacadores de clientes",
+      "skills": [
+        "tribunal-da-ideia",
+        "banca-perfil-instagram",
+        "banca-curriculo-ats",
+        "banca-pagina-de-vendas",
+        "cacadores-de-clientes",
+        "teste-de-batida",
+        "validar-negocio-founder",
+        "pagina-de-vendas-com-revisor",
+        "revisor-inimigo-de-ia",
+        "ebook-completo"
+      ]
+    },
+    "essenciais-afiliado": {
+      "descricao": "Marketing de afiliado: revisar texto, oferta, psicologia de venda, anuncios, criadores e imagens de marketing",
+      "skills": [
+        "copy-editing",
+        "marketing-psychology",
+        "offers",
+        "ad-creative",
+        "influencer-marketing",
+        "image"
+      ]
+    },
+    "conteudo-e-redes": {
+      "descricao": "Criar e analisar conteudo para redes sociais: ideias, textos que parecem humanos, estrategia, lancamento, indicacao e analise de perfil",
+      "skills": [
+        "content-humanizer",
+        "social-content",
+        "content-strategy",
+        "social-media-analyzer",
+        "social-media-manager",
+        "video-content-strategist",
+        "marketing-ideas",
+        "launch-strategy",
+        "referral-program",
+        "content-production",
+        "semana-instagram",
+        "calendario-do-mes",
+        "banca-roteiro-video-curto"
+      ]
+    },
+    "codigo-confiavel": {
+      "descricao": "Codigo com menos erro em qualquer projeto: conferir antes de dizer que terminou, seguranca, git, revisao e especificacao antes de codar",
+      "skills": [
+        "verification-before-completion",
+        "zero-hallucination-coder",
+        "spec-driven-workflow",
+        "git-workflow-and-versioning",
+        "security-and-hardening",
+        "commit-craft",
+        "receiving-code-review",
+        "requesting-code-review",
+        "finishing-a-development-branch",
+        "adversarial-reviewer",
+        "tdd",
+        "code-review",
+        "construir-sem-programar",
+        "revisao-com-codex",
+        "auditoria-de-seguranca",
+        "security-audit",
+        "codebase-design",
+        "projeto-com-plugins-oficiais"
+      ]
+    },
+    "site-e-seo": {
+      "descricao": "Quando o assunto for site ou Google: SEO, dados estruturados, pagina que vende e visual",
+      "skills": [
+        "seo-audit",
+        "schema",
+        "ai-seo",
+        "programmatic-seo",
+        "landing-page-conversion-audit",
+        "frontend-design",
+        "design-taste-frontend",
+        "velocidade-da-pagina",
+        "site-em-paralelo"
+      ]
+    },
+    "videos-e-audio": {
+      "descricao": "Para projetos de video: voz, legenda, edicao com ffmpeg, musica, efeitos, imagens e video com Remotion e HyperFrames",
+      "skills": [
+        "ffmpeg",
+        "text-to-speech",
+        "speech-to-text",
+        "sound-effects",
+        "music",
+        "voice-isolator",
+        "dubbing",
+        "video-use",
+        "video-de-produto",
+        "remotion-best-practices",
+        "remotion-captions",
+        "remotion-render",
+        "remotion-create",
+        "hyperframes",
+        "kinetic-typography",
+        "imagegen",
+        "canvas-design",
+        "brandkit",
+        "criativo-do-produto",
+        "video-explicativo-reels",
+        "voz-clonar-dublar-transcrever",
+        "theme-factory",
+        "hyperframes-registry",
+        "media-use",
+        "editar-video-ffmpeg"
+      ]
+    },
+    "ajudantes-do-claude": {
+      "descricao": "Ajudantes do proprio Claude: escolher as skills certas para a tarefa, instalar skills com cuidado e gastar menos limite",
+      "skills": [
+        "escolher-skills-da-tarefa",
+        "instalar-skills-com-cuidado",
+        "economizar-limite",
+        "tarefas-em-paralelo",
+        "cardapio-de-skills",
+        "achar-skill-nova",
+        "arrumar-pasta",
+        "frases-prontas",
+        "ecc-poucos-agentes"
+      ]
+    },
+    "autoconhecimento": {
+      "descricao": "Se enxergar pelas proprias conversas: o que voce nunca contou, seu padrao, 5 anos com e sem o pior habito, paragrafo da manhã, dar um passo atras, decisao dificil e organizar a cabeca",
+      "skills": [
+        "espelho-das-conversas",
+        "reflect",
+        "hard-call",
+        "capture",
+        "challenge"
+      ]
+    },
+    "conversa-essencial": {
+      "descricao": "Para o chat normal, so conversa: julgar ideia, teste de batida, decisao dificil, prever falhas, entrevista ate ficar claro, professor, frases prontas e espelho das conversas",
+      "skills": [
+        "tribunal-da-ideia",
+        "teste-de-batida",
+        "hard-call",
+        "challenge",
+        "interview-me",
+        "professor",
+        "frases-prontas",
+        "espelho-das-conversas"
+      ]
+    },
+    "conversa-redes-sociais": {
+      "descricao": "Para o chat normal, quando o assunto for Instagram e conteudo: banca do perfil, banca de roteiro de video curto e posts por rede",
+      "skills": [
+        "banca-perfil-instagram",
+        "banca-roteiro-video-curto",
+        "social-content"
+      ]
+    }
+  },
+  "instalar": {
+    "user": [
+      "pensar-e-analisar",
+      "codigo-confiavel",
+      "bancas-do-dono",
+      "ajudantes-do-claude",
+      "autoconhecimento"
+    ],
+    "project": [
+      "essenciais-afiliado",
+      "conteudo-e-redes"
+    ]
+  },
+  "desligar_no_geral": [
+    "documentos@72-skills",
+    "planejamento@72-skills",
+    "avaliacoes@pensamento-critico",
+    "guia@72-skills",
+    "economia-de-tokens@72-skills",
+    "agentes@72-skills",
+    "velocidade@72-skills",
+    "backend@72-skills",
+    "deploy@72-skills",
+    "shopify@72-skills",
+    "pagina-de-venda@72-skills",
+    "trafego-pago@72-skills",
+    "design@72-skills",
+    "seo@72-skills",
+    "qualidade@72-skills",
+    "imagem-e-video@72-skills",
+    "remotion@pensamento-critico"
+  ],
+  "_desligar": "Os 7 ultimos da lista acima continuam ligados no projeto do bot (instalados com --scope project); so saem do geral."
+}

@@ -1,0 +1,9 @@
+Instale o REA (https://github.com/morluto/rea) no meu Claude Code seguindo o README (npx rea-agents setup) e me avise quando terminar e como usar.
+Use só em apps que você tem direito de estudar. O REA precisa do Node.js 22.19+, 24.11+ ou 26+. 
+Baixe só de github.com/morluto/rea, rea.tools ou do pacote npm rea-agents: repositório com nome parecido não é o oficial. 
+Bônus, VoiceStudio (alternativa grátis e de código aberto ao ElevenLabs): baixe o .exe (Windows) ou o .dmg (Mac) em https://github.com/debpalash/VoiceStudio/releases, 
+ou cole no seu agente: "Install the VoiceStudio Electron app on this device and verify it works, following https://github.com/debpalash/VoiceStudio/blob/main/docs/install/agent.md". 
+Funciona melhor com placa NVIDIA ou Mac com chip Apple (sem placa roda no processador, mais devagar; no Mac Intel só abre a interface). 
+A versão Pro é paga e separada. Clone só a sua voz ou com autorização.
+Use o REA pra entender como funciona [A FUNÇÃO QUE VOCÊ QUER ENTENDER] no app [NOME DO APP], me mostre a evidência e monte uma função parecida pro meu projeto.
+Use o REA pra entender como funciona [A FUNÇÃO QUE VOCÊ QUER ENTENDER] no app [NOME DO APP], me mostre a evidência e monte uma função parecida pro meu projeto.

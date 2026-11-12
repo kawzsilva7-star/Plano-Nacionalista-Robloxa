@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eleição Pixel — conceito visual</title>
+<style>
+  :root { --bg:#1a1626; --painel:#262038; --borda:#0d0a14; --texto:#f2e9dc; --fraco:#a99fc0; --ouro:#f7c35c; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--texto); font-family:"Courier New",monospace; font-weight:bold; line-height:1.45; }
+  main { max-width:960px; margin:0 auto; padding:16px; }
+  h1 { font-size:28px; margin:8px 0 4px; color:var(--ouro); text-shadow:3px 3px 0 var(--borda); letter-spacing:1px; }
+  h2 { font-size:18px; margin:28px 0 10px; color:var(--ouro); text-shadow:2px 2px 0 var(--borda); }
+  p { margin:6px 0; font-weight:normal; }
+  .fraco { color:var(--fraco); font-size:13px; }
+  canvas { image-rendering:pixelated; image-rendering:crisp-edges; display:block; }
+  .painel { background:var(--painel); border:4px solid var(--borda); box-shadow:4px 4px 0 var(--borda); padding:12px; }
+  .cena { position:relative; padding:0; overflow:hidden; }
+  .cena canvas { width:100%; height:auto; }
+  .hud { position:absolute; font-size:clamp(9px,1.9vw,15px); background:rgba(13,10,20,.82); border:2px solid var(--borda); padding:3px 7px; }
+  .hud.tl { top:2%; left:1.5%; } .hud.tc { top:2%; left:50%; transform:translateX(-50%); white-space:nowrap; }
+  .hud.br { bottom:3%; right:1.5%; display:flex; gap:5px; background:none; border:none; padding:0; }
+  .tecla { background:#3b3157; border:2px solid var(--borda); padding:4px 7px; box-shadow:2px 2px 0 var(--borda); }
+  .grade { display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); }
+  .carta { text-align:center; }
+  .carta canvas { margin:0 auto 6px; width:112px; height:154px; background:#372e52; border:3px solid var(--borda); }
+  .carta h3 { margin:4px 0; font-size:15px; }
+  .carta ul { text-align:left; margin:6px 0 0; padding-left:18px; font-weight:normal; font-size:13px; }
+  .tag { display:inline-block; font-size:11px; padding:1px 6px; border:2px solid var(--borda); margin-top:2px; }
+  .aviso { color:#ffb199; font-size:12px; font-weight:normal; }
+  .linha { display:flex; flex-wrap:wrap; gap:10px; }
+  .item { flex:1 1 150px; display:flex; gap:10px; align-items:center; }
+  .item canvas { width:56px; height:56px; background:#372e52; border:3px solid var(--borda); flex:none; }
+  .item span { font-weight:normal; font-size:13px; }
+  .partido { flex:1 1 180px; padding:10px; border:4px solid var(--borda); box-shadow:4px 4px 0 var(--borda); color:#16111f; }
+  .area { flex:1 1 130px; height:64px; border:4px solid var(--borda); display:flex; align-items:flex-end; padding:4px 6px; font-size:13px; text-shadow:1px 1px 0 #000; }
+  .cor { flex:1 1 40px; height:38px; border:3px solid var(--borda); }
+  ol { font-weight:normal; padding-left:22px; margin:6px 0; }
+</style>
+</head>
+<body>
+<main>
+  <h1>ELEIÇÃO PIXEL</h1>
+  <p>Luta de partidos em pixel art 3D, num país fictício com cara de Brasil. <span class="fraco">(nome provisório)</span></p>
+  <p class="fraco">Desenho de conceito para mostrar a direção visual. Não é imagem do jogo pronto.</p>
+
+  <h2>1. COMO O JOGO DEVE PARECER</h2>
+  <div class="painel cena">
+    <canvas id="cena" width="192" height="108"></canvas>
+    <div class="hud tl">VOTOS 1.250 · MOEDAS 340</div>
+    <div class="hud tc"><span style="color:#f79a5c">PASTEL 12</span> · <span style="color:#7fd6c2">SONECA 9</span> · <span style="color:#e86a7a">CHURRASCO 7</span></div>
+    <div class="hud br"><span class="tecla">[Q] DISCURSO</span><span class="tecla">[E] GADGET</span></div>
+  </div>
+  <p class="fraco">Textura de tijolo em pixel art, sombras longas, luz de fim de tarde, janelas acesas. O muro do meio é destrutível: os blocos quebram e voltam quando o jogador morre.</p>
+
+  <h2>2. PERSONAGENS (liberados por nível)</h2>
+  <div class="grade">
+    <div class="painel carta"><canvas id="p1" width="16" height="22"></canvas><h3>CALANGOTRON</h3><span class="tag" style="background:#7fe08a;color:#16111f">ROBÔ-LAGARTO</span>
+      <ul><li>Língua de Cabo (puxa o inimigo)</li><li>Escudo de Escamas</li><li>3 skins (Robux)</li></ul></div>
+    <div class="painel carta"><canvas id="p5" width="16" height="22"></canvas><h3>CALANGOTRON<br>FEIJÃO PURO</h3><span class="tag" style="background:#ffb347;color:#16111f">MODO MÚSCULO</span>
+      <ul><li>Fica gigante e forte</li><li>Soco Sísmico (quebra muro)</li><li>Dura poucos segundos</li></ul></div>
+    <div class="painel carta"><canvas id="p2" width="16" height="22"></canvas><h3>CORONEL DO INTERIOR</h3><span class="tag" style="background:#c9a45c;color:#16111f">TANQUE</span>
+      <ul><li>Laço de Boiadeiro</li><li>Grito do Sertão</li></ul></div>
+    <div class="painel carta"><canvas id="p3" width="16" height="22"></canvas><h3>PREFEITA INFLUENCER</h3><span class="tag" style="background:#ff8fc7;color:#16111f">VELOZ</span>
+      <ul><li>Flash da Selfie (cega)</li><li>Chuva de Curtidas</li></ul></div>
+    <div class="painel carta"><canvas id="p4" width="16" height="22"></canvas><h3>DEPUTADO DAS PROMESSAS</h3><span class="tag" style="background:#8fb7ff;color:#16111f">SUPORTE</span>
+      <ul><li>Papelada Voadora</li><li>Promessa de Cura</li></ul></div>
+  </div>
+
+  <h2>3. PARTIDOS (times)</h2>
+  <div class="linha">
+    <div class="partido" style="background:#f79a5c">PARTIDO DO PASTEL<br><span style="font-weight:normal;font-size:13px">Base: feira da cidade grande</span></div>
+    <div class="partido" style="background:#7fd6c2">PARTIDO DA SONECA<br><span style="font-weight:normal;font-size:13px">Base: rede na praia</span></div>
+    <div class="partido" style="background:#e86a7a">PARTIDO DO CHURRASCO<br><span style="font-weight:normal;font-size:13px">Base: fazenda do sertão</span></div>
+  </div>
+
+  <h2>4. GADGETS (no lugar de espadas)</h2>
+  <div class="linha painel">
+    <div class="item"><canvas id="g1" width="16" height="16"></canvas><span><b>Megafone</b><br>Onda de som que empurra e quebra muro</span></div>
+    <div class="item"><canvas id="g2" width="16" height="16"></canvas><span><b>Cajado</b><br>Golpe em área</span></div>
+    <div class="item"><canvas id="g3" width="16" height="16"></canvas><span><b>Carimbo Gigante</b><br>Esmaga e atordoa</span></div>
+    <div class="item"><canvas id="g4" width="16" height="16"></canvas><span><b>Canhão de Santinhos</b><br>Tiro de papel à distância</span></div>
+  </div>
+
+  <h2>5. ÁREAS DO MAPA</h2>
+  <div class="linha">
+    <div class="area" style="background:linear-gradient(#6cc7e8 55%,#f0d9a0 55%)">PRAIA</div>
+    <div class="area" style="background:linear-gradient(#f2b35c 50%,#b5653a 50%)">SERTÃO</div>
+    <div class="area" style="background:linear-gradient(#2e6b4a 50%,#1f4a36 50%)">FLORESTA</div>
+    <div class="area" style="background:linear-gradient(#a8468c 45%,#3a3350 45%)">CIDADE GRANDE</div>
+    <div class="area" style="background:linear-gradient(#7fb0e8 50%,#e8e4da 50%)">CAPITAL</div>
+  </div>
+
+  <h2>6. PALETA DE CORES</h2>
+  <div class="linha" id="paleta"></div>
+
+  <h2>7. COMO SE JOGA</h2>
+  <div class="painel">
+    <ol>
+      <li>Escolhe um partido e nasce na base dele.</li>
+      <li>Escolhe um personagem já liberado.</li>
+      <li>Luta pelas áreas do mapa. Muros e objetos quebram.</li>
+      <li>Derrotar inimigo dá Votos e Moedas. Votos sobem o nível.</li>
+      <li>Nível libera personagens. Moedas compram gadgets. Robux compra skins.</li>
+      <li>No fim da rodada vence o partido com mais Votos, e o mapa é consertado.</li>
+    </ol>
+    <p class="fraco">Fase 2: modo história. O jogador vira presidente, escolhe um rumo e toma decisões que mudam o país.</p>
+  </div>
+</main>
+
+<script>
+function px(c,x,y,w,h,cor){ c.fillStyle=cor; c.fillRect(x,y,w,h); }
+let semente=7; function rnd(){ semente=(semente*16807)%2147483647; return semente/2147483647; }
+
+function boneco(c,x,y,o){
+  px(c,x+1,y+17,9,1,'rgba(0,0,0,.35)');
+  px(c,x+2,y+12,2,5,o.calca); px(c,x+6,y+12,2,5,o.calca);
+  px(c,x+2,y+16,2,1,'#16111f'); px(c,x+6,y+16,2,1,'#16111f');
+  px(c,x+2,y+6,6,6,o.camisa);
+  px(c,x,y+6,2,5,o.camisa); px(c,x+8,y+6,2,5,o.camisa);
+  px(c,x,y+11,2,1,o.pele); px(c,x+8,y+11,2,1,o.pele);
+  px(c,x+2,y,6,6,o.pele);
+  if(o.faixa) for(let i=0;i<6;i++) px(c,x+2+i,y+6+i,1,1,o.faixa);
+  if(o.tipo==='robo'){
+    px(c,x+3,y+2,4,1,'#5ff0ff'); px(c,x+3,y+4,4,1,'#3a3f4a');
+    px(c,x+3,y-1,1,1,'#5fd16a'); px(c,x+5,y-1,1,1,'#5fd16a'); px(c,x+4,y-2,1,2,'#5fd16a'); px(c,x+8,y+14,5,2,'#3fa04a'); px(c,x+12,y+13,2,1,'#3fa04a');
+    px(c,x+4,y+7,2,3,'#ffd166'); px(c,x+2,y+5,6,1,'#7d8490');
+    if(o.musculo){ px(c,x-2,y+5,4,7,o.camisa); px(c,x+8,y+5,4,7,o.camisa); px(c,x-2,y+12,4,2,o.pele); px(c,x+8,y+12,4,2,o.pele); px(c,x+3,y+7,4,1,'#ffd166'); }
+  } else {
+    px(c,x+3,y+2,1,2,'#16111f'); px(c,x+6,y+2,1,2,'#16111f');
+    px(c,x+2,y,6,1,o.cabelo);
+  }
+  if(o.tipo==='coronel'){ px(c,x+1,y-1,8,1,'#e8dcc0'); px(c,x+3,y-3,4,2,'#e8dcc0'); px(c,x+3,y+4,4,1,'#f2f2f2'); }
+  if(o.tipo==='influencer'){ px(c,x+1,y,1,7,o.cabelo); px(c,x+8,y,1,7,o.cabelo); px(c,x+9,y+8,2,3,'#16111f'); px(c,x+9,y+9,2,1,'#6cc7ff'); }
+  if(o.tipo==='deputado'){ px(c,x+4,y+6,2,4,'#2b4fa8'); px(c,x-1,y+8,2,4,'#ffffff'); px(c,x-1,y+9,2,1,'#b9c0cc'); }
+}
+const PERS=[
+  {tipo:'robo',pele:'#5fd16a',camisa:'#3fa04a',calca:'#2f7a3a',faixa:'#f79a5c'},
+  {tipo:'coronel',pele:'#c98e62',cabelo:'#e8e8e8',camisa:'#f2ead8',calca:'#7a5a3a',faixa:'#e86a7a'},
+  {tipo:'influencer',pele:'#e8b48c',cabelo:'#ff5fa8',camisa:'#ffd1e8',calca:'#4a3a8c',faixa:'#7fd6c2'},
+  {tipo:'deputado',pele:'#8c5a3c',cabelo:'#2a2030',camisa:'#3a3f5a',calca:'#22263a',faixa:'#f79a5c'},
+];
+PERS.forEach((o,i)=>{ const c=document.getElementById('p'+(i+1)).getContext('2d'); boneco(c,3,4,o); });
+boneco(document.getElementById('p5').getContext('2d'),3,4,Object.assign({musculo:true},PERS[0]));
+
+function tijolos(c,x,y,w,h,base,escuro,claro){
+  px(c,x,y,w,h,base);
+  for(let j=0;j<h;j+=3){
+    px(c,x,y+j+2,w,1,escuro);
+    for(let i=(j/3%2)*3;i<w;i+=6){ px(c,x+i,y+j,1,2,escuro); if(rnd()<.25) px(c,x+i+1,y+j,3,1,claro); }
+  }
+}
+function janelas(c,x,y,w,h,acesa,apagada){
+  for(let j=y;j<y+h-4;j+=7) for(let i=x;i<x+w-4;i+=7){ const on=rnd()<.6; px(c,i,j,4,4,on?acesa:apagada); if(on) px(c,i,j,4,1,'#fff1c0'); }
+}
+(function cena(){
+  const c=document.getElementById('cena').getContext('2d');
+  ['#2a2a6e','#3f3180','#5b3a8c','#8a3f8e','#b84a88','#e8607a','#f27e68','#f79a5c','#f9b868'].forEach((cor,i)=>px(c,0,i*7,192,7,cor));
+  px(c,128,40,16,16,'#ffd98a'); px(c,130,38,12,20,'#ffd98a'); px(c,126,42,20,12,'#ffd98a');
+  [[52,30,16,34],[70,22,14,42],[86,34,18,30],[106,26,12,38],[120,36,14,28]].forEach(p=>{ px(c,p[0],p[1],p[2],p[3],'#4a2f6b'); janelas(c,p[0]+2,p[1]+3,p[2]-2,p[3]-4,'#f7a85c','#3a2458'); });
+  tijolos(c,0,10,46,70,'#7a3b4a','#57283a','#93505c'); janelas(c,5,16,38,40,'#f7c35c','#3a1f30');
+  tijolos(c,138,4,54,76,'#5d4a7a','#42345c','#74609a'); janelas(c,144,10,46,34,'#f7c35c','#2e2444');
+  px(c,142,50,46,10,'#f2ead8'); px(c,142,50,46,1,'#ffffff'); px(c,142,59,46,1,'#b0a48c');
+  c.fillStyle='#d33a3a'; c.font='bold 8px monospace'; c.fillText('PASTEL',149,58);
+  px(c,146,62,38,18,'#2a2038'); px(c,148,64,34,12,'#f7c35c'); px(c,148,64,34,2,'#fff1c0');
+  for(let i=0;i<5;i++) px(c,150+i*7,70,4,4,['#d33a3a','#f79a5c','#7fd6c2','#e8e4da','#d33a3a'][i]);
+  px(c,0,80,192,28,'#3a3350');
+  for(let j=80;j<108;j+=4){ px(c,0,j,192,1,'#2c2640'); for(let i=(j/4%2)*4;i<192;i+=8) px(c,i,j,1,4,'#2c2640'); }
+  px(c,0,80,192,3,'#6a5f80'); px(c,0,83,192,1,'#221c32');
+  c.fillStyle='rgba(20,10,40,.45)'; c.beginPath(); c.moveTo(0,80); c.lineTo(46,80); c.lineTo(20,108); c.lineTo(0,108); c.fill();
+  c.beginPath(); c.moveTo(138,80); c.lineTo(192,80); c.lineTo(192,108); c.lineTo(100,108); c.fill();
+  px(c,50,72,30,3,'#a8743c'); px(c,50,75,30,5,'#7a5228'); px(c,52,75,2,5,'#573a1a'); px(c,76,75,2,5,'#573a1a');
+  px(c,54,56,1,16,'#573a1a'); px(c,75,56,1,16,'#573a1a'); px(c,55,56,20,6,'#7fd6c2'); px(c,55,56,20,1,'#b8f0e2');
+  const faltam={'2,0':1,'3,0':1,'2,1':1,'3,1':1,'4,0':1,'3,2':1};
+  for(let i=0;i<6;i++) for(let j=0;j<4;j++){ if(faltam[i+','+j]) continue; const bx=88+i*7, by=58+j*6-(j===3?2:0);
+    px(c,bx,58+j*6,7,6,'#b5654a'); px(c,bx,58+j*6,7,1,'#d08060'); px(c,bx,58+j*6+5,7,1,'#7a3c2a'); px(c,bx+6,58+j*6,1,6,'#7a3c2a'); }
+  [[100,50,3],[108,46,2],[114,53,2],[96,44,2],[119,48,3],[105,40,2]].forEach(e=>{ px(c,e[0],e[1],e[2],e[2],'#b5654a'); px(c,e[0],e[1],e[2],1,'#d08060'); });
+  px(c,104,60,10,1,'#fff1c0'); px(c,101,63,5,1,'#fff1c0'); px(c,108,66,7,1,'#fff1c0');
+  boneco(c,60,55,PERS[2]); boneco(c,74,84,PERS[0]); boneco(c,122,86,PERS[1]); boneco(c,30,88,PERS[3]);
+  px(c,86,90,4,3,'#e8e4da'); px(c,90,89,3,5,'#e8e4da'); px(c,93,88,2,7,'#d33a3a');
+  [96,100,105].forEach((x,i)=>{ px(c,x,87-i,1,9+i*2,'rgba(255,241,192,.8)'); });
+  c.fillStyle='rgba(247,154,92,.10)'; c.fillRect(0,0,192,108);
+})();
+
+function icone(id,rects){ const c=document.getElementById(id).getContext('2d'); rects.forEach(r=>px(c,r[0],r[1],r[2],r[3],r[4])); }
+icone('g1',[[2,6,3,4,'#e8e4da'],[5,5,3,6,'#e8e4da'],[8,3,3,10,'#d33a3a'],[11,2,2,12,'#ff7a6a'],[3,10,2,4,'#8a909c'],[14,5,1,1,'#f7c35c'],[14,8,1,1,'#f7c35c'],[14,11,1,1,'#f7c35c']]);
+icone('g2',[[7,4,2,11,'#a8743c'],[8,4,1,11,'#7a5228'],[5,1,6,4,'#7fd6c2'],[6,0,4,1,'#b8f0e2'],[7,2,2,2,'#ffffff']]);
+icone('g3',[[6,1,4,3,'#7a5228'],[7,4,2,5,'#a8743c'],[3,9,10,3,'#5a6070'],[2,12,12,2,'#d33a3a'],[3,9,10,1,'#8a909c']]);
+icone('g4',[[1,6,9,5,'#5a6070'],[1,6,9,1,'#8a909c'],[10,5,2,7,'#3a3f4a'],[3,11,3,3,'#7a5228'],[13,3,2,3,'#ffffff'],[13,8,2,3,'#ffffff'],[14,12,2,3,'#ffffff'],[13,4,2,1,'#f79a5c'],[13,9,2,1,'#7fd6c2']]);
+
+['#2a2a6e','#5b3a8c','#b84a88','#e8607a','#f79a5c','#f7c35c','#7a3b4a','#b5654a','#5d4a7a','#3a3350','#7fd6c2','#f2ead8'].forEach(cor=>{
+  const d=document.createElement('div'); d.className='cor'; d.style.background=cor; d.title=cor; document.getElementById('paleta').appendChild(d); });
+</script>
+</body>
+</html>

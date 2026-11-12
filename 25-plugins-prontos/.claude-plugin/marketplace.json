@@ -1,0 +1,66 @@
+{
+  "name": "descontos-skills",
+  "owner": {
+    "name": "Descontos Brutais"
+  },
+  "metadata": {
+    "description": "Plugins montados das skills do dono (só no PC)"
+  },
+  "plugins": [
+    {
+      "name": "pensar-e-analisar",
+      "source": "./pensar-e-analisar",
+      "description": "Pensamento critico e analise para conversas e projetos gerais: atacar uma ideia, prever falhas, decidir, revisar rumo, ler a fundo e passar o bastao"
+    },
+    {
+      "name": "bancas-do-dono",
+      "source": "./bancas-do-dono",
+      "description": "Bancas, tribunal e teste de batida: julgar ideia, perfil do Instagram, curriculo para ATS, pagina de vendas e cacadores de clientes"
+    },
+    {
+      "name": "essenciais-afiliado",
+      "source": "./essenciais-afiliado",
+      "description": "Marketing de afiliado: revisar texto, oferta, psicologia de venda, anuncios, criadores e imagens de marketing"
+    },
+    {
+      "name": "conteudo-e-redes",
+      "source": "./conteudo-e-redes",
+      "description": "Criar e analisar conteudo para redes sociais: ideias, textos que parecem humanos, estrategia, lancamento, indicacao e analise de perfil"
+    },
+    {
+      "name": "codigo-confiavel",
+      "source": "./codigo-confiavel",
+      "description": "Codigo com menos erro em qualquer projeto: conferir antes de dizer que terminou, seguranca, git, revisao e especificacao antes de codar"
+    },
+    {
+      "name": "site-e-seo",
+      "source": "./site-e-seo",
+      "description": "Quando o assunto for site ou Google: SEO, dados estruturados, pagina que vende e visual"
+    },
+    {
+      "name": "videos-e-audio",
+      "source": "./videos-e-audio",
+      "description": "Para projetos de video: voz, legenda, edicao com ffmpeg, musica, efeitos, imagens e video com Remotion e HyperFrames"
+    },
+    {
+      "name": "ajudantes-do-claude",
+      "source": "./ajudantes-do-claude",
+      "description": "Ajudantes do proprio Claude: escolher as skills certas para a tarefa, instalar skills com cuidado e gastar menos limite"
+    },
+    {
+      "name": "autoconhecimento",
+      "source": "./autoconhecimento",
+      "description": "Se enxergar pelas proprias conversas: o que voce nunca contou, seu padrao, 5 anos com e sem o pior habito, paragrafo da manhã, dar um passo atras, decisao dificil e organizar a cabeca"
+    },
+    {
+      "name": "conversa-essencial",
+      "source": "./conversa-essencial",
+      "description": "Para o chat normal, so conversa: julgar ideia, teste de batida, decisao dificil, prever falhas, entrevista ate ficar claro, professor, frases prontas e espelho das conversas"
+    },
+    {
+      "name": "conversa-redes-sociais",
+      "source": "./conversa-redes-sociais",
+      "description": "Para o chat normal, quando o assunto for Instagram e conteudo: banca do perfil, banca de roteiro de video curto e posts por rede"
+    }
+  ]
+}

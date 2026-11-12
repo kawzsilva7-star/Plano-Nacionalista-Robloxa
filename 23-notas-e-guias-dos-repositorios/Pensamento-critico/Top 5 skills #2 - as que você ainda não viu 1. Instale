@@ -1,0 +1,11 @@
+Instale estas 5 skills e me avise quando estiverem prontas: 1)
+a skill improve-codebase-architecture do repositório https://github.com/mattpocock/skills; 2)
+a skill tdd do repositório https://github.com/mattpocock/skills; 3) 
+a skill handoff do repositório https://github.com/mattpocock/skills; 4)
+a skill teach do repositório https://github.com/mattpocock/skills; 5) 
+a skill vercel-react-best-practices do repositório https://github.com/vercel-labs/agent-skills.
+Números de instalação lidos em 23/10/2026. A vercel-react-best-practices serve pra sites feitos em React/Next.js.
+Use a skill improve-codebase-architecture e me mostre o que está bagunçado neste projeto antes de virar problema. 
+Quando eu pedir uma funcionalidade nova, use a tdd pra testar antes de me entregar.
+Se a conversa ficar longa, use a handoff pra passar tudo pra uma conversa nova. 
+E use a teach pra me explicar o porquê de cada mudança.

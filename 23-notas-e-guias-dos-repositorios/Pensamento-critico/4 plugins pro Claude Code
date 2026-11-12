@@ -1,0 +1,7 @@
+Instale estes 4 e me avise quando estiverem prontos (se algum pedir instalação fora do Claude Code, me diga o comando antes de rodar): 
+1) a skill playwright-cli do repositório https://github.com/microsoft/playwright-cli; 2) o Agent Skills do repositório https://github.com/addyosmani/agent-skills; 3)
+o Graphify do repositório https://github.com/Graphify-Labs/graphify, e depois rode o graphify na pasta deste projeto; 4)
+a skill ponytail do repositório https://github.com/dietrichgebert/ponytail.
+Use o ponytail pra fazer do jeito mais simples que funciona, consulte o mapa do graphify antes de abrir arquivos
+siga planejar → construir → testar do Agent Skills e, no fim, 
+abra o resultado no navegador com o Playwright e me mostre os erros que achou. A tarefa é: [O QUE VOCÊ QUER CONSTRUIR]

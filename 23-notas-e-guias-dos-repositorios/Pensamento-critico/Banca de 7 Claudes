@@ -1,0 +1,16 @@
+Você vai montar uma banca de 7 avaliadores pra tentar reprovar o meu currículo para a vaga abaixo. Rode cada avaliador separado, sem um ver a nota do outro.
+
+1. Filtro automático (o sistema que tria currículos antes de uma pessoa ler): liste o que faria o meu currículo ser descartado. Formato difícil de ler, palavras-chave da vaga que faltam, seções confusas, datas sem padrão.
+2. Gerente da vaga: você me chamaria pra entrevista? Responda sim ou não e explique em 3 linhas.
+3 a 7. Cinco leitores, cada um lendo sozinho: o meu futuro chefe, outro candidato à mesma vaga, o dono da empresa, um recrutador que só tem 30 segundos e um especialista da área. Cada um dá uma nota de 0 a 10 e aponta os 3 piores problemas.
+
+Depois junte tudo numa lista única de erros, do mais grave ao menos grave.
+
+Por fim, reescreva o meu currículo inteiro corrigindo cada erro. Regras: não invente experiência, número, curso ou resultado que não está no original; onde faltar um dado, escreva [COMPLETAR: o que falta]; comece cada item com verbo de ação e mostre o resultado com número quando eu tiver o número; use as palavras-chave da vaga onde forem verdade.
+
+Responda em português.
+
+Meu currículo: [COLE O TEXTO OU ANEXE O PDF]
+A vaga: [COLE A DESCRIÇÃO DA VAGA]
+Revise antes de enviar: a banca aponta os erros e reescreve, mas a decisão de chamar pra entrevista é de quem contrata. Não envie dados pessoais que você não queira compartilhar (CPF, endereço completo).
+Agora deixe o currículo reescrito em uma página só, me mostre uma tabela com o que mudou e por quê, e faça a banca avaliar de novo a versão nova.

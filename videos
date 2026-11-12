@@ -1,0 +1,30 @@
+Quero criar um vídeo para o Instagram que mostre meu produto de um jeito bonito e profissional. Use a skill remotion-best-practices para isso.
+
+Sobre o vídeo:
+- Meu produto: [O QUE VOCÊ VENDE]
+- Para quem é: [SEU PÚBLICO]
+- O que o vídeo precisa dizer: [SUA MENSAGEM OU ROTEIRO]
+- Chamada no final: [EX.: COMENTA QUERO]
+- Minha marca: [NOME, CORES E ONDE ESTÁ O LOGO]
+- Fotos e narração: [PASTA COM OS ARQUIVOS, OU "NÃO TENHO"]
+- Duração: [EX.: 30 SEGUNDOS]
+
+Como eu gostaria que ficasse:
+- Vertical (1080x1920, 30 quadros por segundo), pronto para Reels.
+- Logo no começo, mostre o resultado para prender a atenção. Depois explique em cenas curtas e termine na chamada.
+- Textos grandes, fáceis de ler no celular.
+- Use as cores e o logo da minha marca em todo o vídeo.
+- Se eu mandar narração, coloque legenda acompanhando a fala.
+
+Para o motion ficar com cara profissional:
+- Kinetic typography: as palavras entram uma a uma, no ritmo da fala.
+- Animações com spring e easing suave (ease-in-out), nada de movimento linear.
+- Stagger: os elementos de cada cena entram em sequência, com pequenos atrasos.
+- Transições entre cenas com wipe, zoom ou slide, sem corte seco.
+- Reveal com máscara para revelar títulos e imagens.
+- Leve parallax e escala no fundo, para dar profundidade.
+- Números com contador animado e destaques com sublinhado que se desenha.
+- Cortes acompanhando a batida da música, se houver trilha.
+
+Para começar, crie o projeto com npx create-video@latest. Quando estiver pronto, abra a prévia com npx remotion studio para eu ver. Depois que eu aprovar, exporte o MP4.
+Instale as skills do repositório https://github.com/remotion-dev/skills e me avise quando estiverem prontas.

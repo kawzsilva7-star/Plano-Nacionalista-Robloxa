@@ -1,0 +1,43 @@
+{
+  "name": "pensamento-critico",
+  "owner": {
+    "name": "kawzsilva7-star"
+  },
+  "metadata": {
+    "description": "Skills próprias e Remotion",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "avaliacoes",
+      "description": "Rodada de tubarões (negócio) e banca de avaliadores (currículo)",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./.claude/skills/rodada-de-tubaroes",
+        "./.claude/skills/banca-de-avaliadores"
+      ]
+    },
+    {
+      "name": "remotion",
+      "description": "Vídeos com código no Remotion, incluindo vídeo de produto para Instagram",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./.claude/skills/video-de-produto",
+        "./.claude/skills/remotion-best-practices",
+        "./.claude/skills/remotion-captions",
+        "./.claude/skills/remotion-create",
+        "./.claude/skills/remotion-docs",
+        "./.claude/skills/remotion-interactivity",
+        "./.claude/skills/remotion-maps",
+        "./.claude/skills/remotion-markup",
+        "./.claude/skills/remotion-multimedia",
+        "./.claude/skills/remotion-render",
+        "./.claude/skills/remotion-saas",
+        "./.claude/skills/remotion-studio",
+        "./.claude/skills/remotion-upgrade"
+      ]
+    }
+  ]
+}
