@@ -186,9 +186,16 @@ Referência: `roblox/referencias/estilo_rua_pixel.png` (feita dentro do Roblox, 
 - Técnica: as cidades ficam longe uma da outra no mesmo jogo, com **StreamingEnabled** ligado (só carrega o que está perto). Viagem = mover o personagem para a estação de destino, com tela escurecendo. Mais simples que um jogo por cidade.
 - O tutorial deve mostrar uma estação e explicar como viajar (novo passo em `Tutorial.lua`).
 
+- **Cidades famosas para escolher onde nascer (ideia nova do dono, atualiza as 3 do lançamento):** de 3 a 5 das cidades mais famosas do Brasil; o jogador **escolhe** em qual começa. PROPOSTA:
+  - **Versão com 3:** Rio de Janeiro, São Paulo e Salvador.
+  - **Versão com 5 (uma por região):** Rio de Janeiro e São Paulo (Sudeste), Salvador (Nordeste), Manaus (Norte) e Brasília (Centro-Oeste). Sul (Curitiba ou Porto Alegre) entra depois.
+  - Campinas (cidade do dono) continua prevista, como cidade extra ou bônus.
+  - Com cidades em regiões diferentes o **avião é necessário já no lançamento**, e o jogo fica maior (mais trabalho e mais peso). Com 3 cidades no mesmo Sudeste bastam os ônibus.
+  - Brasília: cuidado com prédios do governo (usar versões genéricas).
+
 ### Ideias do dono ainda incompletas (a completar quando ele mandar mais)
 O dono pediu para ir adicionando as ideias, mesmo incompletas. Nada abaixo está fechado.
-- **Mapa:** cidades de lançamento (SP, Rio, Campinas), formato das regiões, onde o jogador nasce (Rio ou SP; falta definir se escolhe, sorteia ou depende do partido).
+- **Mapa:** quais cidades no lançamento (3 ou 5 famosas; Campinas como extra), formato das regiões. O jogador **escolhe** onde nasce (decisão do dono).
 - **Transporte:** ônibus urbano, metrô, ônibus de viagem, avião, carro e moto próprios. Falta: preços, se o veículo próprio vai pela estrada entre cidades, se dá para lutar com ele, se a moto é item separado do carro.
 - **Preço por partido:** isenção de ônibus conforme o partido (proposta acima, sem fechar). Falta: se o jogador pode trocar de partido e com que espera.
 - **Bairros e pontos:** nomes reais ou inventados (sem decidir).
