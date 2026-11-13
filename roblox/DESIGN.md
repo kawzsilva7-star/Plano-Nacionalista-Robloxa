@@ -186,6 +186,16 @@ Referência: `roblox/referencias/estilo_rua_pixel.png` (feita dentro do Roblox, 
 - Técnica: as cidades ficam longe uma da outra no mesmo jogo, com **StreamingEnabled** ligado (só carrega o que está perto). Viagem = mover o personagem para a estação de destino, com tela escurecendo. Mais simples que um jogo por cidade.
 - O tutorial deve mostrar uma estação e explicar como viajar (novo passo em `Tutorial.lua`).
 
+### Ideias do dono ainda incompletas (a completar quando ele mandar mais)
+O dono pediu para ir adicionando as ideias, mesmo incompletas. Nada abaixo está fechado.
+- **Mapa:** cidades de lançamento (SP, Rio, Campinas), formato das regiões, onde o jogador nasce (Rio ou SP; falta definir se escolhe, sorteia ou depende do partido).
+- **Transporte:** ônibus urbano, metrô, ônibus de viagem, avião, carro e moto próprios. Falta: preços, se o veículo próprio vai pela estrada entre cidades, se dá para lutar com ele, se a moto é item separado do carro.
+- **Preço por partido:** isenção de ônibus conforme o partido (proposta acima, sem fechar). Falta: se o jogador pode trocar de partido e com que espera.
+- **Bairros e pontos:** nomes reais ou inventados (sem decidir).
+- **Primeira cena de teste:** sugestão de uma rua de Campinas, sem decidir.
+- **Nome do jogo:** sem decidir (provisório "Eleição Pixel"; sugestão "Plano Nacional").
+- **Qualidade visual:** pixel art 3D com textura boa (ver "Meta de qualidade visual").
+
 ### Câmera (pedido do dono)
 - Jogo 3D em **primeira pessoa** por padrão, com opção de **terceira pessoa** (câmera atrás do personagem). Tecla **V** alterna.
 - Código: `Camera.lua` (LocalScript). Na terceira pessoa o jogador vê o próprio personagem e as skins; na primeira, só braços e gadget.
