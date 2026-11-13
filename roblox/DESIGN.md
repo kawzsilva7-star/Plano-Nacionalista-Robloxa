@@ -164,6 +164,22 @@ Referência: `roblox/referencias/estilo_rua_pixel.png` (feita dentro do Roblox, 
 - Atenção: o Roblox tem limite de memória e de peças. Cena bonita não pode ter milhares de peças soltas; usar texturas repetidas e poucos modelos.
 - Esta meta vale para todas as cidades. A primeira cena de teste deve ser **uma rua de Campinas** (decisão do dono pendente).
 
+### Cidades e viagem (decisões do dono)
+- Lançamento: **São Paulo, Rio de Janeiro e Campinas** (as 3 ficam na região Sudeste). Cidades reais são permitidas (são lugares); marcas, logos, políticos e prédios do governo reais continuam inventados ou genéricos.
+- O jogador **nasce no Rio de Janeiro ou em São Paulo** (as mais famosas). Campinas é a cidade do dono e abre depois, viajando.
+- Para mudar de cidade ou região, o jogador **pega transporte**:
+
+| Transporte | Para quê | Estado |
+|---|---|---|
+| **Ônibus urbano** | Andar dentro da cidade (entre bairros) | PROPOSTA |
+| **Metrô** | Andar rápido dentro de São Paulo e do Rio | PROPOSTA |
+| **Ônibus de viagem** | Entre cidades da mesma região (SP, Rio e Campinas) | PROPOSTA |
+| **Avião** | Entre regiões (Sul, Nordeste, Norte, Centro-Oeste), no futuro | PROPOSTA |
+
+- PROPOSTA (a confirmar com o dono): viagem custa Moedas e tem nível mínimo; ao embarcar, tela curta de viagem (3 a 5 s) e o jogador aparece na estação de destino; sem luta dentro do veículo e nas estações; no lançamento só existem urbano, metrô e ônibus de viagem (aeroporto "em breve").
+- Técnica: as cidades ficam longe uma da outra no mesmo jogo, com **StreamingEnabled** ligado (só carrega o que está perto). Viagem = mover o personagem para a estação de destino, com tela escurecendo. Mais simples que um jogo por cidade.
+- O tutorial deve mostrar uma estação e explicar como viajar (novo passo em `Tutorial.lua`).
+
 ### Câmera (pedido do dono)
 - Jogo 3D em **primeira pessoa** por padrão, com opção de **terceira pessoa** (câmera atrás do personagem). Tecla **V** alterna.
 - Código: `Camera.lua` (LocalScript). Na terceira pessoa o jogador vê o próprio personagem e as skins; na primeira, só braços e gadget.
