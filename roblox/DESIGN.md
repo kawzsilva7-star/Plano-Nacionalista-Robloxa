@@ -119,6 +119,17 @@ Referência: `roblox/referencias/tela_partidos.jpg` (print de outro jogo do Robl
   - "Membros" (ex.: 250) vale para o jogo todo e precisa ser salvo (DataStore). "Online aqui" é só o servidor atual.
   - **Criar partido** deixa o jogador digitar nome e sigla: passa obrigatoriamente pelo filtro de texto do Roblox, mais uma lista de nomes proibidos (partidos e políticos reais). Se der muito trabalho, a primeira versão fica sem "Criar partido".
 
+### HUD e mapa (referência: 3 prints de outro jogo de espada)
+Referências: `roblox/referencias/hud_mapa_1.jpg`, `_2.jpg`, `_3.jpg`. Terceira pessoa, mundo aberto com ilha, grama, mar e árvores em bloco.
+O que aproveitar no nosso HUD (em pixel art):
+- **Habilidades em botões de losango no canto inferior esquerdo**, com a tecla escrita (Q, E, R) e o nome embaixo. No nosso jogo: Q, E, R = as 3 habilidades do personagem escolhido, mais o gadget.
+- **Fileira de botões de menu embaixo:** Inventário, Configurações, Títulos. Nós: Inventário, Configurações (inclui ligar/desligar o tutorial), Títulos e Partidos.
+- **Barra de vida vermelha** na esquerda.
+- No topo: **ping/servidor** e **Emotes (B)**.
+- **Títulos** = rótulo de conquista que o jogador equipa (ex.: "Derrubou 100 muros", "Eleito da rodada"). Ideia nova: dá motivo para jogar e é fácil de ligar às missões.
+- Ideia de mapa: ilhas/áreas separadas, uma por região do Brasil fictício, com caixotes e ruínas como cenário.
+Diferença: esse jogo usa textura lisa e realista. O nosso é **pixel art** (texturas 16x16 / 32x32 sem suavização).
+
 ### Câmera (pedido do dono)
 - Jogo 3D em **primeira pessoa** por padrão, com opção de **terceira pessoa** (câmera atrás do personagem). Tecla **V** alterna.
 - Código: `Camera.lua` (LocalScript). Na terceira pessoa o jogador vê o próprio personagem e as skins; na primeira, só braços e gadget.
