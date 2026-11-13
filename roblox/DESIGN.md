@@ -165,7 +165,7 @@ Referência: `roblox/referencias/estilo_rua_pixel.png` (feita dentro do Roblox, 
 - Esta meta vale para todas as cidades. A primeira cena de teste deve ser **uma rua de Campinas** (decisão do dono pendente).
 
 ### Cidades e viagem (decisões do dono)
-- Lançamento: **São Paulo, Rio de Janeiro e Campinas** (as 3 ficam na região Sudeste). Cidades reais são permitidas (são lugares); marcas, logos, políticos e prédios do governo reais continuam inventados ou genéricos.
+- Lançamento: **São Paulo, Brasília e Rio de Janeiro** (decisão posterior do dono; Campinas fica como cidade especial extra). Cidades reais são permitidas (são lugares); marcas, logos, políticos e prédios do governo reais continuam inventados ou genéricos.
 - O jogador **nasce no Rio de Janeiro ou em São Paulo** (as mais famosas). Campinas é a cidade do dono e abre depois, viajando.
 - Para mudar de cidade ou região, o jogador **pega transporte**:
 
@@ -174,7 +174,7 @@ Referência: `roblox/referencias/estilo_rua_pixel.png` (feita dentro do Roblox, 
 | **Ônibus urbano** | Andar pelo bairro (decisão do dono); rota fixa com pontos de parada | DECIDIDO (rota e preço: proposta) |
 | **Metrô** | Andar rápido dentro de São Paulo e do Rio | DECIDIDO |
 | **Ônibus de viagem** | Entre cidades da mesma região (SP, Rio e Campinas) | DECIDIDO |
-| **Avião** | Entre regiões (Sul, Nordeste, Norte, Centro-Oeste), no futuro | DECIDIDO |
+| **Avião** | Entre regiões: já no lançamento (Brasília ↔ SP/Rio); outras regiões depois | DECIDIDO |
 
 - **Veículo próprio (decisão do dono):** o jogador pode ter **carro ou moto** dele. Só marcas e modelos **inventados** (sem marca real). Proposta: compra com Moedas (comuns) e Robux (skins e modelos especiais); chamado por botão, aparece ao lado do jogador; some ao morrer, trocar de cidade ou sair. A moto abre junto com o primeiro carro? Fica para decidir.
 - **Preço do transporte (ideia do dono: depende do partido, com isenção de ônibus).** Base: transporte custa Moedas. Cada partido fictício ganha uma isenção ou desconto e paga o preço em outro lugar (equilíbrio, sem dizer qual é "o certo"). PROPOSTA:
@@ -182,10 +182,13 @@ Referência: `roblox/referencias/estilo_rua_pixel.png` (feita dentro do Roblox, 
   - **Pátria Pixel:** ônibus de viagem **grátis**; metrô e avião no preço normal.
   - **Livre Mercado:** carro/moto e avião com **desconto**; ônibus e metrô mais caros.
   - Sem partido (neutros): preço normal.
-- PROPOSTA (a confirmar com o dono): viagem custa Moedas e tem nível mínimo; ao embarcar, tela curta de viagem (3 a 5 s) e o jogador aparece na estação de destino; sem luta dentro do veículo e nas estações; no lançamento só existem urbano, metrô e ônibus de viagem (aeroporto "em breve").
+- PROPOSTA (a confirmar com o dono): viagem custa Moedas e tem nível mínimo; ao embarcar, tela curta de viagem (3 a 5 s) e o jogador aparece na estação de destino; sem luta dentro do veículo e nas estações; no lançamento existem urbano, metrô, ônibus de viagem e avião (Brasília ↔ SP/Rio).
 - Técnica: as cidades ficam longe uma da outra no mesmo jogo, com **StreamingEnabled** ligado (só carrega o que está perto). Viagem = mover o personagem para a estação de destino, com tela escurecendo. Mais simples que um jogo por cidade.
 - O tutorial deve mostrar uma estação e explicar como viajar (novo passo em `Tutorial.lua`).
 
+- **CIDADES DO LANÇAMENTO (decisão do dono): São Paulo, Brasília e Rio de Janeiro.** O jogador escolhe em qual começa. Campinas (cidade do dono, especial) entra como cidade extra, ainda sem data.
+  - São Paulo e Rio ficam no Sudeste (**ônibus de viagem** entre elas). Brasília fica no Centro-Oeste, então Brasília ↔ SP/Rio precisa de **avião já no lançamento**. O avião sai da lista "futuro".
+  - Brasília: prédios do governo e símbolos nacionais genéricos ou inventados (risco de moderação e Lei 5.700/1971).
 - **Cidades famosas para escolher onde nascer (ideia nova do dono, atualiza as 3 do lançamento):** de 3 a 5 das cidades mais famosas do Brasil; o jogador **escolhe** em qual começa. PROPOSTA:
   - **Versão com 3:** Rio de Janeiro, São Paulo e Salvador.
   - **Versão com 5 (uma por região):** Rio de Janeiro e São Paulo (Sudeste), Salvador (Nordeste), Manaus (Norte) e Brasília (Centro-Oeste). Sul (Curitiba ou Porto Alegre) entra depois.
@@ -203,7 +206,7 @@ Referência: `roblox/referencias/estilo_rua_pixel.png` (feita dentro do Roblox, 
 
 ### Ideias do dono ainda incompletas (a completar quando ele mandar mais)
 O dono pediu para ir adicionando as ideias, mesmo incompletas. Nada abaixo está fechado.
-- **Mapa:** quais cidades no lançamento (3 ou 5 famosas; Campinas como extra), formato das regiões. O jogador **escolhe** onde nasce (decisão do dono).
+- **Mapa:** cidades do lançamento definidas (SP, Brasília, Rio; Campinas extra); falta o formato das regiões. O jogador **escolhe** onde nasce (decisão do dono).
 - **Transporte:** ônibus urbano, metrô, ônibus de viagem, avião, carro e moto próprios. Falta: preços, se o veículo próprio vai pela estrada entre cidades, se dá para lutar com ele, se a moto é item separado do carro.
 - **Preço por partido:** isenção de ônibus conforme o partido (proposta acima, sem fechar). Falta: se o jogador pode trocar de partido e com que espera.
 - **Bairros e pontos:** nomes reais ou inventados (sem decidir).
