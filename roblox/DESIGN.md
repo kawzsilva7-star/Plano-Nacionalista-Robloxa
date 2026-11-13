@@ -153,6 +153,17 @@ Todos inventados. Cada partido tem vantagens e problemas; o jogo não diz qual �
 - Em aberto: ilhas separadas por portais, ou um mapa só com a silhueta do Brasil; quantas regiões no lançamento; luta liberada onde.
 - Legal (confirmar com advogado se for usar algo real de propósito): lugares e paisagens como inspiração são livres; evitar marcas e logos reais, fotos e mapas copiados, bandeira/brasão/hino reais (Lei 5.700/1971) e prédios do governo reconhecíveis (risco de moderação do Roblox).
 
+### Meta de qualidade visual (pedido do dono: pixel art com textura muito boa, jogo lindo)
+Referência: `roblox/referencias/estilo_rua_pixel.png` (feita dentro do Roblox, mostra que é possível). O que faz ficar assim:
+1. **Textura**: ladrilhos 32x32 que se repetem sem emenda, ampliados para 256x256 **sem suavizar** (o Roblox borra textura pequena). Primeira amostra: `roblox/texturas/` (tijolo, paralelepípedo, calçada, asfalto, reboco, telha, grama, madeira, janela acesa). Gerador: `gerar_texturas.py`.
+2. **Tamanho do pixel igual em tudo**: 1 pixel da textura = sempre o mesmo tamanho no mundo (ex.: 0,25 stud). Senão o tijolo de uma parede fica maior que o de outra e estraga o visual.
+3. **Luz**: Lighting em **Future**, sol baixo (fim de tarde), sombras, névoa colorida, brilho (Bloom) e correção de cor. Script: `Estilo_Visual.lua`.
+4. **Janelas e letreiros acesos** (material Neon ou luz de ponto) para a noite e o fim de tarde ficarem vivos.
+5. **Objetos pequenos** (carros, placas, máquinas, árvores, cartazes no chão) modelados em voxel (MagicaVoxel/Blockbench). São eles que dão vida à cena.
+6. **Fios, canos, grades e papéis no chão**: detalhes pequenos repetidos em todo canto.
+- Atenção: o Roblox tem limite de memória e de peças. Cena bonita não pode ter milhares de peças soltas; usar texturas repetidas e poucos modelos.
+- Esta meta vale para todas as cidades. A primeira cena de teste deve ser **uma rua de Campinas** (decisão do dono pendente).
+
 ### Câmera (pedido do dono)
 - Jogo 3D em **primeira pessoa** por padrão, com opção de **terceira pessoa** (câmera atrás do personagem). Tecla **V** alterna.
 - Código: `Camera.lua` (LocalScript). Na terceira pessoa o jogador vê o próprio personagem e as skins; na primeira, só braços e gadget.
