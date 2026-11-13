@@ -171,10 +171,10 @@ Referência: `roblox/referencias/estilo_rua_pixel.png` (feita dentro do Roblox, 
 
 | Transporte | Para quê | Estado |
 |---|---|---|
-| **Ônibus urbano** | Andar dentro da cidade (entre bairros) | PROPOSTA |
-| **Metrô** | Andar rápido dentro de São Paulo e do Rio | PROPOSTA |
-| **Ônibus de viagem** | Entre cidades da mesma região (SP, Rio e Campinas) | PROPOSTA |
-| **Avião** | Entre regiões (Sul, Nordeste, Norte, Centro-Oeste), no futuro | PROPOSTA |
+| **Ônibus urbano** | Andar pelo bairro (decisão do dono); rota fixa com pontos de parada | DECIDIDO (rota e preço: proposta) |
+| **Metrô** | Andar rápido dentro de São Paulo e do Rio | DECIDIDO |
+| **Ônibus de viagem** | Entre cidades da mesma região (SP, Rio e Campinas) | DECIDIDO |
+| **Avião** | Entre regiões (Sul, Nordeste, Norte, Centro-Oeste), no futuro | DECIDIDO |
 
 - PROPOSTA (a confirmar com o dono): viagem custa Moedas e tem nível mínimo; ao embarcar, tela curta de viagem (3 a 5 s) e o jogador aparece na estação de destino; sem luta dentro do veículo e nas estações; no lançamento só existem urbano, metrô e ônibus de viagem (aeroporto "em breve").
 - Técnica: as cidades ficam longe uma da outra no mesmo jogo, com **StreamingEnabled** ligado (só carrega o que está perto). Viagem = mover o personagem para a estação de destino, com tela escurecendo. Mais simples que um jogo por cidade.
