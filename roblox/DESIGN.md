@@ -215,6 +215,19 @@ O dono pediu para ir adicionando as ideias, mesmo incompletas. Nada abaixo está
 - **Cada cidade com algo diferente e Campinas especial:** falta o dono dizer o quê (ver ideias acima).
 - **Qualidade visual:** pixel art 3D com textura boa (ver "Meta de qualidade visual").
 
+### Mapa do Brasil gigante (estrutura criada; pedido do dono)
+Pedido: montar a estrutura do Brasil no Roblox, gigante, com a maioria dos lugares indisponível ("em breve"). Feito **por arquivos**, sem mexer no Studio.
+- Arquivos em `roblox/mapa/`: `gerar_mapa_brasil.py` (gerador), `MapaBrasil_Dados.lua` (dados), `MapaBrasil_Construtor.lua` (constrói no jogo) e `mapa_brasil_preview.png` (prévia).
+- O contorno vem dos limites oficiais dos 27 estados (IBGE, via arquivo público no GitHub). O mapa do Brasil Escola que o dono mandou foi só referência; não foi copiado.
+- Brasil em **blocos** (combina com pixel art): 91 x 79 células, 1 célula = 200 studs, cerca de **18.200 x 15.800 studs**. São 337 peças no total.
+- **Liberados no lançamento:** São Paulo, Rio de Janeiro e Distrito Federal (Brasília). Os outros **24 estados ficam "em breve"**: cor apagada, placa "EM BREVE" e o jogador é devolvido se tentar entrar. O mar também é bloqueado (ainda não há barco).
+- Marcadores das cidades: São Paulo, Rio, Brasília e Campinas (especial, "em breve").
+- Para liberar um estado depois: trocar `disponivel = false` por `true` no `MapaBrasil_Dados.lua`, ou, com o jogo rodando, pôr o atributo `Liberado_UF` (ex.: `Liberado_BA`) no Workspace.
+- Para o avião (futuro): marcar o jogador com o atributo `EmViagem = true` durante o voo, para a trava não devolvê-lo.
+- Como testar no Studio: ModuleScript `MapaBrasil_Dados` + Script `MapaBrasil_Construtor` em ServerScriptService; Workspace > StreamingEnabled ligado. Ao dar Play, o jogador nasce perto de São Paulo; ao andar até Minas Gerais (ao norte) ele deve ser devolvido.
+- Atenção: atravessar o mapa a pé leva uns 20 minutos; por isso existem os transportes. As cidades (SP, Rio, Brasília) serão construídas em detalhe por cima da posição delas no mapa.
+- Próximos passos do mapa (a decidir pelo dono): relevo e bioma por região, texturas pixel art nas peças, a cidade de São Paulo em detalhe, aeroportos.
+
 ### Câmera (pedido do dono)
 - Jogo 3D em **primeira pessoa** por padrão, com opção de **terceira pessoa** (câmera atrás do personagem). Tecla **V** alterna.
 - Código: `Camera.lua` (LocalScript). Na terceira pessoa o jogador vê o próprio personagem e as skins; na primeira, só braços e gadget.
