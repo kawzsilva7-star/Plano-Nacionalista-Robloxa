@@ -176,6 +176,7 @@ Referência: `roblox/referencias/estilo_rua_pixel.png` (feita dentro do Roblox, 
 | **Ônibus de viagem** | Entre cidades da mesma região (SP, Rio e Campinas) | DECIDIDO |
 | **Avião** | Entre regiões (Sul, Nordeste, Norte, Centro-Oeste), no futuro | DECIDIDO |
 
+- **Veículo próprio (decisão do dono):** o jogador pode ter **carro ou moto** dele. Só marcas e modelos **inventados** (sem marca real). Proposta: compra com Moedas (comuns) e Robux (skins e modelos especiais); chamado por botão, aparece ao lado do jogador; some ao morrer, trocar de cidade ou sair. A moto abre junto com o primeiro carro? Fica para decidir.
 - PROPOSTA (a confirmar com o dono): viagem custa Moedas e tem nível mínimo; ao embarcar, tela curta de viagem (3 a 5 s) e o jogador aparece na estação de destino; sem luta dentro do veículo e nas estações; no lançamento só existem urbano, metrô e ônibus de viagem (aeroporto "em breve").
 - Técnica: as cidades ficam longe uma da outra no mesmo jogo, com **StreamingEnabled** ligado (só carrega o que está perto). Viagem = mover o personagem para a estação de destino, com tela escurecendo. Mais simples que um jogo por cidade.
 - O tutorial deve mostrar uma estação e explicar como viajar (novo passo em `Tutorial.lua`).
