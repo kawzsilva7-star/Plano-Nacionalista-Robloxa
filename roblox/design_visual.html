@@ -48,30 +48,19 @@
   <div class="painel cena">
     <canvas id="cena" width="192" height="108"></canvas>
     <div class="hud tl">VOTOS 1.250 · MOEDAS 340</div>
-    <div class="hud tc"><span style="color:#f79a5c">PASTEL 12</span> · <span style="color:#7fd6c2">SONECA 9</span> · <span style="color:#e86a7a">CHURRASCO 7</span></div>
+    <div class="hud tc"><span style="color:#7fe08a">PREE 12</span> · <span style="color:#5c9cf0">PÁTRIA 9</span> · <span style="color:#f7c35c">MERCADO 7</span></div>
     <div class="hud br"><span class="tecla">[Q] DISCURSO</span><span class="tecla">[E] GADGET</span></div>
   </div>
   <p class="fraco">Textura de tijolo em pixel art, sombras longas, luz de fim de tarde, janelas acesas. O muro do meio é destrutível: os blocos quebram e voltam quando o jogador morre.</p>
 
   <h2>2. PERSONAGENS (liberados por nível)</h2>
-  <div class="grade">
-    <div class="painel carta"><canvas id="p1" width="16" height="22"></canvas><h3>CALANGOTRON</h3><span class="tag" style="background:#7fe08a;color:#16111f">ROBÔ-LAGARTO</span>
-      <ul><li>Língua de Cabo (puxa o inimigo)</li><li>Escudo de Escamas</li><li>3 skins (Robux)</li></ul></div>
-    <div class="painel carta"><canvas id="p5" width="16" height="22"></canvas><h3>CALANGOTRON<br>FEIJÃO PURO</h3><span class="tag" style="background:#ffb347;color:#16111f">MODO MÚSCULO</span>
-      <ul><li>Fica gigante e forte</li><li>Soco Sísmico (quebra muro)</li><li>Dura poucos segundos</li></ul></div>
-    <div class="painel carta"><canvas id="p2" width="16" height="22"></canvas><h3>CORONEL DO INTERIOR</h3><span class="tag" style="background:#c9a45c;color:#16111f">TANQUE</span>
-      <ul><li>Laço de Boiadeiro</li><li>Grito do Sertão</li></ul></div>
-    <div class="painel carta"><canvas id="p3" width="16" height="22"></canvas><h3>PREFEITA INFLUENCER</h3><span class="tag" style="background:#ff8fc7;color:#16111f">VELOZ</span>
-      <ul><li>Flash da Selfie (cega)</li><li>Chuva de Curtidas</li></ul></div>
-    <div class="painel carta"><canvas id="p4" width="16" height="22"></canvas><h3>DEPUTADO DAS PROMESSAS</h3><span class="tag" style="background:#8fb7ff;color:#16111f">SUPORTE</span>
-      <ul><li>Papelada Voadora</li><li>Promessa de Cura</li></ul></div>
-  </div>
+  <div id="elenco"></div>
 
-  <h2>3. PARTIDOS (times)</h2>
+  <h2>3. PARTIDOS (times, todos fictícios)</h2>
   <div class="linha">
-    <div class="partido" style="background:#f79a5c">PARTIDO DO PASTEL<br><span style="font-weight:normal;font-size:13px">Base: feira da cidade grande</span></div>
-    <div class="partido" style="background:#7fd6c2">PARTIDO DA SONECA<br><span style="font-weight:normal;font-size:13px">Base: rede na praia</span></div>
-    <div class="partido" style="background:#e86a7a">PARTIDO DO CHURRASCO<br><span style="font-weight:normal;font-size:13px">Base: fazenda do sertão</span></div>
+    <div class="partido" style="background:#7fe08a">REVOLUÇÃO ESQUERDA EVOLUTION (PREE)<br><span style="font-weight:normal;font-size:13px">Esquerda · Base: fábrica e roça</span></div>
+    <div class="partido" style="background:#5c9cf0">PÁTRIA PIXEL<br><span style="font-weight:normal;font-size:13px">Nacionalismo · Base: quartel na capital</span></div>
+    <div class="partido" style="background:#f7c35c">LIVRE MERCADO<br><span style="font-weight:normal;font-size:13px">Neoliberal · Base: torre da cidade grande</span></div>
   </div>
 
   <h2>4. GADGETS (no lugar de espadas)</h2>
@@ -123,7 +112,9 @@ function boneco(c,x,y,o){
   if(o.faixa) for(let i=0;i<6;i++) px(c,x+2+i,y+6+i,1,1,o.faixa);
   if(o.tipo==='robo'){
     px(c,x+3,y+2,4,1,'#5ff0ff'); px(c,x+3,y+4,4,1,'#3a3f4a');
-    px(c,x+3,y-1,1,1,'#5fd16a'); px(c,x+5,y-1,1,1,'#5fd16a'); px(c,x+4,y-2,1,2,'#5fd16a'); px(c,x+8,y+14,5,2,'#3fa04a'); px(c,x+12,y+13,2,1,'#3fa04a');
+    if(o.lagarto){ px(c,x+3,y-1,1,1,'#5fd16a'); px(c,x+5,y-1,1,1,'#5fd16a'); px(c,x+4,y-2,1,2,'#5fd16a'); px(c,x+8,y+14,5,2,'#3fa04a'); px(c,x+12,y+13,2,1,'#3fa04a'); } else { px(c,x+4,y-2,1,2,'#8a909c'); px(c,x+4,y-3,1,1,o.led||'#5ff0ff'); }
+    if(o.marechal){ px(c,x+1,y-3,8,2,'#7a5228'); px(c,x+3,y+7,1,1,'#fff'); px(c,x+6,y+7,1,1,'#fff'); px(c,x-1,y+7,2,1,'#f7c35c'); }
+    if(o.calc){ px(c,x+9,y+8,4,5,'#d8e4f0'); px(c,x+9,y+8,4,1,'#5ff0ff'); px(c,x+10,y+10,1,1,'#3a3f4a'); px(c,x+12,y+10,1,1,'#3a3f4a'); }
     px(c,x+4,y+7,2,3,'#ffd166'); px(c,x+2,y+5,6,1,'#7d8490');
     if(o.musculo){ px(c,x-2,y+5,4,7,o.camisa); px(c,x+8,y+5,4,7,o.camisa); px(c,x-2,y+12,4,2,o.pele); px(c,x+8,y+12,4,2,o.pele); px(c,x+3,y+7,4,1,'#ffd166'); }
   } else {
@@ -132,6 +123,12 @@ function boneco(c,x,y,o){
   }
   if(o.tipo==='coronel'){ px(c,x+1,y-1,8,1,'#e8dcc0'); px(c,x+3,y-3,4,2,'#e8dcc0'); px(c,x+3,y+4,4,1,'#f2f2f2'); }
   if(o.tipo==='influencer'){ px(c,x+1,y,1,7,o.cabelo); px(c,x+8,y,1,7,o.cabelo); px(c,x+9,y+8,2,3,'#16111f'); px(c,x+9,y+9,2,1,'#6cc7ff'); }
+  if(o.tipo==='sindicalista'){ px(c,x+2,y-1,6,2,'#f7c35c'); px(c,x+1,y+1,8,1,'#f7c35c'); px(c,x-2,y+8,1,6,'#7a5228'); px(c,x-3,y+6,3,3,'#8a909c'); }
+  if(o.tipo==='camponesa'){ px(c,x,y-1,10,1,'#e0c070'); px(c,x+2,y-2,6,1,'#e0c070'); px(c,x+1,y+1,1,5,o.cabelo); px(c,x+8,y+1,1,5,o.cabelo); px(c,x+10,y+4,1,9,'#a8743c'); px(c,x+9,y+3,3,1,'#c9c9c9'); }
+  if(o.tipo==='capitao'){ px(c,x+2,y-1,6,2,'#2b4fa8'); px(c,x+1,y+1,8,1,'#16111f'); px(c,x+3,y+7,4,1,'#5fd16a'); px(c,x+3,y+8,4,1,'#f7c35c'); px(c,x-2,y+4,1,9,'#a8743c'); px(c,x-4,y+3,4,3,'#5fd16a'); px(c,x-3,y+4,2,1,'#f7c35c'); }
+  if(o.tipo==='general'){ px(c,x+1,y-2,8,2,'#2f6a3a'); px(c,x+1,y,8,1,'#16111f'); px(c,x+3,y+4,4,1,'#e8e8e8'); px(c,x+2,y+7,1,1,'#f7c35c'); px(c,x+4,y+7,1,1,'#f7c35c'); px(c,x+6,y+7,1,1,'#f7c35c'); px(c,x+10,y+5,3,2,'#f7c35c'); px(c,x+9,y+6,1,1,'#f7c35c'); }
+  if(o.tipo==='empresario'){ px(c,x+3,y-3,4,3,'#16111f'); px(c,x+1,y,8,1,'#16111f'); px(c,x+3,y+4,4,1,'#ffffff'); px(c,x+4,y+6,2,5,'#d33a3a'); px(c,x-1,y+11,3,3,'#7a5228'); }
+  if(o.tipo==='dona'){ px(c,x+1,y,1,6,o.cabelo); px(c,x+8,y,1,6,o.cabelo); px(c,x+3,y+2,4,1,'#16111f'); px(c,x+9,y+9,4,4,'#f7c35c'); px(c,x+10,y+8,2,1,'#16111f'); }
   if(o.tipo==='deputado'){ px(c,x+4,y+6,2,4,'#2b4fa8'); px(c,x-1,y+8,2,4,'#ffffff'); px(c,x-1,y+9,2,1,'#b9c0cc'); }
 }
 const PERS=[
@@ -140,8 +137,41 @@ const PERS=[
   {tipo:'influencer',pele:'#e8b48c',cabelo:'#ff5fa8',camisa:'#ffd1e8',calca:'#4a3a8c',faixa:'#7fd6c2'},
   {tipo:'deputado',pele:'#8c5a3c',cabelo:'#2a2030',camisa:'#3a3f5a',calca:'#22263a',faixa:'#f79a5c'},
 ];
-PERS.forEach((o,i)=>{ const c=document.getElementById('p'+(i+1)).getContext('2d'); boneco(c,3,4,o); });
-boneco(document.getElementById('p5').getContext('2d'),3,4,Object.assign({musculo:true},PERS[0]));
+PERS[0].lagarto=true;
+const T=(cor,txt)=>'<span class="tag" style="background:'+cor+';color:#16111f">'+txt+'</span>';
+const ELENCO=[
+ {g:'REVOLUÇÃO ESQUERDA EVOLUTION (PREE) · esquerda · verde e amarelo', cor:'#7fe08a', l:[
+  {n:'CALANGOTRON',t:'ROBÔ-LAGARTO',a:['Língua de Cabo (puxa o inimigo)','Escudo de Escamas','3 skins (Robux)'],o:PERS[0]},
+  {n:'CALANGOTRON<br>FEIJÃO PURO',t:'MODO MÚSCULO',a:['Fica gigante e forte','Soco Sísmico (quebra muro)','Dura poucos segundos'],o:Object.assign({musculo:true},PERS[0])},
+  {n:'SINDICALISTA MARRETEIRA',t:'TANQUE',a:['Marretada (quebra muro)','Greve Geral (atordoa em área)'],o:{tipo:'sindicalista',pele:'#c98e62',cabelo:'#3a2a20',camisa:'#3fa04a',calca:'#2f5a3a',faixa:'#7fe08a'}},
+  {n:'CAMPONESA DO CHAPÉU DE PALHA',t:'VELOZ',a:['Enxada Giratória','Colheita Rápida (corre e cura)'],o:{tipo:'camponesa',pele:'#8c5a3c',cabelo:'#2a2030',camisa:'#f2ead8',calca:'#7a5a3a',faixa:'#7fe08a'}}]},
+ {g:'PÁTRIA PIXEL · nacionalismo · azul e verde', cor:'#5c9cf0', l:[
+  {n:'CAPITÃO DA BANDEIRA',t:'TANQUE',a:['Escudo da Pátria','Hasteada (a bandeira cura aliados)'],o:{tipo:'capitao',pele:'#e8b48c',cabelo:'#4a3020',camisa:'#2b4fa8',calca:'#1f2f5a',faixa:'#5c9cf0'}},
+  {n:'GENERAL CORNETÃO',t:'SUPORTE',a:['Toque de Corneta (aliados correm mais)','Discurso Motivador'],o:{tipo:'general',pele:'#c98e62',cabelo:'#e8e8e8',camisa:'#2f6a3a',calca:'#1f3a24',faixa:'#5c9cf0'}},
+  {n:'MARECHAL DE LATÃO',t:'ROBÔ ANTIGO',a:['Canhão de Fanfarra','Armadura de Latão'],o:{tipo:'robo',marechal:true,led:'#f7c35c',pele:'#c9a45c',camisa:'#a8873c',calca:'#7a5f2a',faixa:'#5c9cf0'}}]},
+ {g:'LIVRE MERCADO · neoliberal · dourado', cor:'#f7c35c', l:[
+  {n:'EMPRESÁRIO TUBARÃO',t:'ATAQUE',a:['Mordida de Contrato','Fusão (pula e esmaga)'],o:{tipo:'empresario',pele:'#e8b48c',cabelo:'#16111f',camisa:'#5a6070',calca:'#2a2f3a',faixa:'#f7c35c'}},
+  {n:'DONA BOLSA',t:'SUPORTE',a:['Chuva de Moedas','Bolsa Pesada (ataque em área)'],o:{tipo:'dona',pele:'#e8b48c',cabelo:'#f7d774',camisa:'#f2ead8',calca:'#6a3a8c',faixa:'#f7c35c'}},
+  {n:'ROBÔ-CONTADOR',t:'VELOZ',a:['Calculadora Laser','Desconto Relâmpago'],o:{tipo:'robo',calc:true,led:'#7fd6ff',pele:'#b8d4ea',camisa:'#8aa8c4',calca:'#5a7090',faixa:'#f7c35c'}}]},
+ {g:'NEUTROS E CHEFES DAS ÁREAS DO MAPA', cor:'#ff8fc7', l:[
+  {n:'CORONEL DO INTERIOR',t:'TANQUE',a:['Laço de Boiadeiro','Grito do Sertão'],o:PERS[1]},
+  {n:'PREFEITA INFLUENCER',t:'VELOZ',a:['Flash da Selfie (cega)','Chuva de Curtidas'],o:PERS[2]},
+  {n:'DEPUTADO DAS PROMESSAS',t:'SUPORTE',a:['Papelada Voadora','Promessa de Cura'],o:PERS[3]}]}
+];
+(function(){
+  const raiz=document.getElementById('elenco');
+  ELENCO.forEach(g=>{
+    const h=document.createElement('p'); h.style.cssText='margin:14px 0 6px;color:'+g.cor; h.textContent=g.g; raiz.appendChild(h);
+    const grade=document.createElement('div'); grade.className='grade';
+    g.l.forEach(c=>{
+      const d=document.createElement('div'); d.className='painel carta';
+      d.innerHTML='<canvas width="16" height="22"></canvas><h3>'+c.n+'</h3>'+T(g.cor,c.t)+'<ul>'+c.a.map(x=>'<li>'+x+'</li>').join('')+'</ul>';
+      boneco(d.querySelector('canvas').getContext('2d'),3,4,c.o);
+      grade.appendChild(d);
+    });
+    raiz.appendChild(grade);
+  });
+})();
 
 function tijolos(c,x,y,w,h,base,escuro,claro){
   px(c,x,y,w,h,base);

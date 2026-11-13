@@ -130,6 +130,22 @@ O que aproveitar no nosso HUD (em pixel art):
 - Ideia de mapa: ilhas/áreas separadas, uma por região do Brasil fictício, com caixotes e ruínas como cenário.
 Diferença: esse jogo usa textura lisa e realista. O nosso é **pixel art** (texturas 16x16 / 32x32 sem suavização).
 
+### Elenco inicial: 3 partidos, 9 personagens + 3 neutros (aprovado pelo dono)
+Todos inventados. Cada partido tem vantagens e problemas; o jogo não diz qual é o "certo". Visual em `design_visual.html`.
+
+| Partido (fictício) | Linha | Personagens |
+|---|---|---|
+| **Revolução Esquerda Evolution** (PREE) | esquerda, verde e amarelo | CalangoTron (+ modo Feijão Puro), Sindicalista Marreteira (tanque), Camponesa do Chapéu de Palha (veloz) |
+| **Pátria Pixel** | nacionalismo, azul e verde | Capitão da Bandeira (tanque), General Cornetão (suporte), Marechal de Latão (robô antigo) |
+| **Livre Mercado** | neoliberal, dourado | Empresário Tubarão (ataque), Dona Bolsa (suporte), Robô-Contador (veloz) |
+| **Neutros / chefes das áreas** | sem partido | Coronel do Interior, Prefeita Influencer, Deputado das Promessas |
+
+- Cada personagem tem 2 ou 3 ataques (lista em `design_visual.html`) e skins vendidas com Robux.
+- Liberação: o primeiro de cada partido já vem pronto; os outros abrem por **nível**. Os mais fortes ficam nos níveis altos.
+- Os neutros podem ser chefes de cada área do mapa e liberar depois de derrotados.
+- Sem símbolo, número, slogan ou nome de partido real. Sem foice, estrela ou bandeira de partido.
+- Mais personagens e partidos depois (o dono quer receber sugestões dos jogadores).
+
 ### Câmera (pedido do dono)
 - Jogo 3D em **primeira pessoa** por padrão, com opção de **terceira pessoa** (câmera atrás do personagem). Tecla **V** alterna.
 - Código: `Camera.lua` (LocalScript). Na terceira pessoa o jogador vê o próprio personagem e as skins; na primeira, só braços e gadget.
@@ -181,7 +197,7 @@ Diferença: esse jogo usa textura lisa e realista. O nosso é **pixel art** (tex
 2c. [escrita, falta testar] Tutorial com opção de desativar: `Tutorial_Servidor.lua` + `Tutorial.lua` (e `Parte1_Dados.lua` atualizado para salvar a escolha)
 3. Partidos: tela de partidos (lista, filiar-se, lotado), escolher time e nascer na base
 3b. Missões: quadro, progresso e recompensas
-4. Personagens: escolher e trocar; lista de liberados salva
+4. Personagens: elenco inicial (12), escolher e trocar, liberar por nível; lista de liberados salva
 5. Combate: ataque básico + 1 habilidade, vida, derrota e retorno (ataques quebram o mapa)
 6. Recompensas: Votos, Moedas, nível, liberar personagens
 7. Loja: skins (Robux), gadgets (Moedas), compra de Moedas
