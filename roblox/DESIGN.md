@@ -146,6 +146,13 @@ Todos inventados. Cada partido tem vantagens e problemas; o jogo não diz qual �
 - Sem símbolo, número, slogan ou nome de partido real. Sem foice, estrela ou bandeira de partido.
 - Mais personagens e partidos depois (o dono quer receber sugestões dos jogadores).
 
+### Mapa (EM DEFINIÇÃO, decisões do dono)
+- Mapa inspirado no Brasil, dividido nas **5 regiões**: Norte, Nordeste, Centro-Oeste, Sudeste e Sul.
+- Nomes de regiões (geografia) podem ser usados. **Cidades, prédios, monumentos, marcas, bandeira, brasão e hino: inventados** (ver regras legais e de moderação abaixo).
+- Proposta de cenário: **Centro-Oeste = área central** (capital planejada fictícia, praça do palanque, sem luta); **Norte** = floresta e rios; **Nordeste** = praia e sertão; **Sudeste** = cidade grande e serra; **Sul** = campos, neblina e pinheiros.
+- Em aberto: ilhas separadas por portais, ou um mapa só com a silhueta do Brasil; quantas regiões no lançamento; luta liberada onde.
+- Legal (confirmar com advogado se for usar algo real de propósito): lugares e paisagens como inspiração são livres; evitar marcas e logos reais, fotos e mapas copiados, bandeira/brasão/hino reais (Lei 5.700/1971) e prédios do governo reconhecíveis (risco de moderação do Roblox).
+
 ### Câmera (pedido do dono)
 - Jogo 3D em **primeira pessoa** por padrão, com opção de **terceira pessoa** (câmera atrás do personagem). Tecla **V** alterna.
 - Código: `Camera.lua` (LocalScript). Na terceira pessoa o jogador vê o próprio personagem e as skins; na primeira, só braços e gadget.
