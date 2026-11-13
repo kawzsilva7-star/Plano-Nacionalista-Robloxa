@@ -192,6 +192,14 @@ Referência: `roblox/referencias/estilo_rua_pixel.png` (feita dentro do Roblox, 
   - Campinas (cidade do dono) continua prevista, como cidade extra ou bônus.
   - Com cidades em regiões diferentes o **avião é necessário já no lançamento**, e o jogo fica maior (mais trabalho e mais peso). Com 3 cidades no mesmo Sudeste bastam os ônibus.
   - Brasília: cuidado com prédios do governo (usar versões genéricas).
+- **Cada cidade é diferente (decisão do dono); Campinas é ESPECIAL (é a cidade do dono).** Falta definir o quê. IDEIAS (propostas, sem fechar):
+  - **Campinas:** bairro tranquilo e acolhedor, com os segredos do jogo: itens e skins exclusivos "de Campinas", um NPC que representa o criador do jogo, códigos secretos e missões especiais. Dá identidade ao projeto e conteúdo para divulgar.
+  - **São Paulo:** metrô, prédios altos, missões de trabalho e muito movimento.
+  - **Rio de Janeiro:** praia, morro, calçadão e desafios ao ar livre.
+  - **Salvador:** ladeiras, festa de rua e música.
+  - **Manaus:** floresta, rio e barco como transporte.
+  - **Brasília:** cidade planejada, centro do palanque e dos debates (prédios genéricos).
+  - Cada cidade com sua missão, inimigo e item próprios.
 
 ### Ideias do dono ainda incompletas (a completar quando ele mandar mais)
 O dono pediu para ir adicionando as ideias, mesmo incompletas. Nada abaixo está fechado.
@@ -201,6 +209,7 @@ O dono pediu para ir adicionando as ideias, mesmo incompletas. Nada abaixo está
 - **Bairros e pontos:** nomes reais ou inventados (sem decidir).
 - **Primeira cena de teste:** sugestão de uma rua de Campinas, sem decidir.
 - **Nome do jogo:** sem decidir (provisório "Eleição Pixel"; sugestão "Plano Nacional").
+- **Cada cidade com algo diferente e Campinas especial:** falta o dono dizer o quê (ver ideias acima).
 - **Qualidade visual:** pixel art 3D com textura boa (ver "Meta de qualidade visual").
 
 ### Câmera (pedido do dono)
