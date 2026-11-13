@@ -98,6 +98,27 @@ Personagens: a última imagem enviada (boneco de blocos, low-poly) fica como pos
 
 **Ganhar / perder:** rodada de alguns minutos; ganha o partido com mais Votos. Quem é derrotado volta para a base em poucos segundos.
 
+### Tutorial do começo (pedido do dono)
+- Abre sozinho **só na primeira vez**: mostra os lugares (Base, Missões, Arena, Loja, Palanque), um por vez, com seta em cima do lugar e texto curto.
+- O jogador pode **pular** a qualquer momento ou marcar **"NÃO MOSTRAR MAIS"** (desativa de vez). O botão **"?"** no canto reabre quando quiser.
+- A escolha (ativo / já feito) é salva junto com os dados do jogador (`Parte1_Dados.lua`).
+- Código: `Tutorial_Servidor.lua` (Script) + `Tutorial.lua` (LocalScript). Os lugares são peças dentro de `Workspace > TutorialAlvos` com os nomes `Base`, `Missoes`, `Arena`, `Loja`, `Palanque`. Se a pasta não existir, o servidor cria 5 blocos de teste.
+- Quando existirem as missões, o passo "Missões" passa a levar ao quadro de verdade. Para trocar textos ou lugares, é só editar a lista `PASSOS` no começo de `Tutorial.lua`.
+
+### Missões (a fazer)
+- Quadro de missões na base. Exemplos: "entre em um partido", "quebre 10 blocos", "derrote 3 inimigos", "use um gadget".
+- Dão Votos e Moedas. Missões iniciais viram o "tutorial de verdade": o jogador aprende fazendo.
+- Progresso salvo por jogador.
+
+### Tela de partidos (referência: print que o dono mandou)
+Referência: `roblox/referencias/tela_partidos.jpg` (print de outro jogo do Roblox). O que aproveitar, com partidos **fictícios**:
+- Lista "em destaque": sigla, nome, ícone, **membros**, **online aqui**, botão **FILIAR-SE** e **LOTADO** quando enche.
+- Abas: **Explorar**, **Meu partido**, **Meu pedido** (pedido de entrada), **+ Criar partido**. Busca por sigla ou nome.
+- Cuidados:
+  - O print mostra siglas e nomes parecidos com partidos reais e "extrema direita"; **não copiar nomes**. Os nossos são inventados.
+  - "Membros" (ex.: 250) vale para o jogo todo e precisa ser salvo (DataStore). "Online aqui" é só o servidor atual.
+  - **Criar partido** deixa o jogador digitar nome e sigla: passa obrigatoriamente pelo filtro de texto do Roblox, mais uma lista de nomes proibidos (partidos e políticos reais). Se der muito trabalho, a primeira versão fica sem "Criar partido".
+
 ### Câmera (pedido do dono)
 - Jogo 3D em **primeira pessoa** por padrão, com opção de **terceira pessoa** (câmera atrás do personagem). Tecla **V** alterna.
 - Código: `Camera.lua` (LocalScript). Na terceira pessoa o jogador vê o próprio personagem e as skins; na primeira, só braços e gadget.
@@ -146,7 +167,9 @@ Personagens: a última imagem enviada (boneco de blocos, low-poly) fica como pos
 1. [escrita, falta testar] Dados do jogador e salvamento: `Parte1_Dados.lua` (trocar "Poder" por "Votos" depois)
 2. [escrita, falta testar] Mapa destrutível: `MapaDestrutivel.lua` + `MapaDestrutivel_Teste.lua`
 2b. [escrita, falta testar] Câmera 1ª/3ª pessoa: `Camera.lua`
-3. Partidos: escolher time e nascer na base
+2c. [escrita, falta testar] Tutorial com opção de desativar: `Tutorial_Servidor.lua` + `Tutorial.lua` (e `Parte1_Dados.lua` atualizado para salvar a escolha)
+3. Partidos: tela de partidos (lista, filiar-se, lotado), escolher time e nascer na base
+3b. Missões: quadro, progresso e recompensas
 4. Personagens: escolher e trocar; lista de liberados salva
 5. Combate: ataque básico + 1 habilidade, vida, derrota e retorno (ataques quebram o mapa)
 6. Recompensas: Votos, Moedas, nível, liberar personagens

@@ -37,15 +37,27 @@ local function aoEntrar(player)
 		return store:GetAsync("J_" .. player.UserId)
 	end)
 
+	-- Preferências do tutorial (a tela lê estes atributos)
+	player:SetAttribute("TutorialAtivo", true)
+	player:SetAttribute("TutorialFeito", false)
+
 	if ok then
 		if dados then
 			poder.Value = dados.Poder or PADRAO.Poder
 			moedas.Value = dados.Moedas or PADRAO.Moedas
+			if typeof(dados.TutorialAtivo) == "boolean" then
+				player:SetAttribute("TutorialAtivo", dados.TutorialAtivo)
+			end
+			if typeof(dados.TutorialFeito) == "boolean" then
+				player:SetAttribute("TutorialFeito", dados.TutorialFeito)
+			end
 		end
 		carregou[player] = true
 	else
 		warn("Falha ao carregar dados de", player.Name, "- não vou salvar para não apagar o progresso.")
 	end
+
+	player:SetAttribute("DadosCarregados", true)
 end
 
 local function salvar(player)
@@ -56,6 +68,8 @@ local function salvar(player)
 	local dados = {
 		Poder = pasta.Poder.Value,
 		Moedas = pasta.Moedas.Value,
+		TutorialAtivo = player:GetAttribute("TutorialAtivo") ~= false,
+		TutorialFeito = player:GetAttribute("TutorialFeito") == true,
 	}
 	local ok = tentar(function()
 		store:SetAsync("J_" .. player.UserId, dados)
