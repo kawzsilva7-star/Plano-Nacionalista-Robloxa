@@ -226,6 +226,7 @@ Pedido: montar a estrutura do Brasil no Roblox, gigante, com a maioria dos lugar
 - Para o avião (futuro): marcar o jogador com o atributo `EmViagem = true` durante o voo, para a trava não devolvê-lo.
 - Como testar no Studio: ModuleScript `MapaBrasil_Dados` + Script `MapaBrasil_Construtor` em ServerScriptService; Workspace > StreamingEnabled ligado. Ao dar Play, o jogador nasce perto de São Paulo; ao andar até Minas Gerais (ao norte) ele deve ser devolvido.
 - Atenção: atravessar o mapa a pé leva uns 20 minutos; por isso existem os transportes. As cidades (SP, Rio, Brasília) serão construídas em detalhe por cima da posição delas no mapa.
+- **Decidido (dono):** a divisa entre os estados liberados fica **trancada**; para mudar de cidade o jogador é obrigado a usar o transporte (ônibus de viagem entre SP e Rio, avião para Brasília). A trava será escrita junto com o sistema de transporte.
 - Próximos passos do mapa (a decidir pelo dono): relevo e bioma por região, texturas pixel art nas peças, a cidade de São Paulo em detalhe, aeroportos.
 
 ### Câmera (pedido do dono)
