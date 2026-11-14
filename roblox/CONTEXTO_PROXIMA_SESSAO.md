@@ -5,6 +5,9 @@
 - Cansado (trabalha na DHL): respostas curtas, em português, passo a passo. Não criar coisas sem ele ter dado a ideia; ele manda ideias aos poucos (muitas por áudio) e quer tudo registrado, mesmo incompleto.
 - O Claude não roda o Roblox Studio: escreve em arquivos, o programador testa. Uma parte pequena por vez.
 
+## Novidades da última sessão
+Ver `roblox/RESUMO_DESTA_SESSAO.md` (configurações, tokens, itens, classe EXCLUSIVO, Espada Trovão, Braço do Alquimista, ponte, mapa e transporte).
+
 ## Onde está tudo
 Repositório privado `kawzsilva7-star/plano-nacionalista-robloxa`, branch `main`:
 - `CLAUDE.md` (regras do projeto e das skills), `roblox/DESIGN.md` (ideia completa, ~300 linhas), `roblox/design_visual.html` (conceito visual), `roblox/referencias/` (prints), `roblox/texturas/` (10 texturas pixel art), `roblox/mapa/` (Brasil em blocos).

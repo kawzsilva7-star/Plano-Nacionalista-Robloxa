@@ -241,9 +241,10 @@ Pedido: montar a estrutura do Brasil no Roblox, gigante, com a maioria dos lugar
 | Martelo | arma | 8 | empurrão **40 (2 quadrados)**, dano 20, recarga 8 s, 0,5 s de preparo |
 | **Poção de Cura** (dono) | consumível | 4 | **cura 30**, recarga **15 s** (dono: 10 ou 15), 1 s para beber |
 | **Marca da Maldição** (dono) | habilidade | **10** (muito forte) | efeito ainda a definir pelo dono |
-| **Espada Trovão** (dono) — classe **SSE+ (exclusiva)** | arma | **10** | empurrão **150** (7,5 quadrados), dano **45**, 1 golpe por segundo. Preço: **25.000 Moedas ou 50 Robux** |
+| **Espada Trovão** (dono) — classe **EXCLUSIVO (SSE)** | arma | **10** | empurrão **150** (7,5 quadrados), dano **45**, 1 golpe por segundo. Preço: **25.000 Moedas ou 50 Robux** |
 
-- **Classes:** `SSE+` = classe **exclusiva** (dono). As outras classes ainda serão definidas.
+- **Classes (decisão do dono):** uma só classe exclusiva, código **SSE**, a **mais cara do jogo**. Na tela aparece **"EXCLUSIVO" em cima do item, colorido (arco-íris)**. **Tudo que é inspirado em anime entra nela**, sempre com nome e visual originais. As outras classes ainda serão definidas.
+- **Braço do Alquimista** (dono): arma da classe EXCLUSIVO, inspirada num anime de alquimistas (braço de metal, troca equivalente, transformar o chão). Números e preço a definir. Habilidades propostas: Lâmina de Metal, Muralha de Pedra, Lanças do Chão, Troca Equivalente, Reconstruir. Sem nome do personagem, símbolo do casaco, círculo igual ao do anime ou visual copiado (risco de remoção por direitos autorais).
 - **Recarga** = tempo entre um uso e outro. Na arma, é o intervalo entre golpes (Espada Trovão: 1 por segundo); na habilidade, é a espera para usar de novo.
 - **Habilidades da arma** (pergunta do dono sobre "combo"): golpe especial numa tecla própria (E, R), com recarga própria. PROPOSTA para a Espada Trovão: **Investida Trovão** (E, avança para a frente e empurra, recarga 8 s) e **Corte Lateral** (R, acerta quem está em volta, recarga 6 s). Combo é outra coisa: sequência de golpes normais em que o último é mais forte.
 - **Alerta de equilíbrio (Espada Trovão):** com 150 de empurrão por golpe, um golpe tira o adversário de quase meia ponte, e 45 de dano mata em 3 golpes. Vendida por Robux, vira "pague para ganhar" (contra a regra de equilíbrio da seção Dinheiro). Sugestão: golpe normal com empurrão 30 e dano 25; o empurrão de 150 só na Investida Trovão. Decisão do dono; por enquanto ficou como ele pediu.

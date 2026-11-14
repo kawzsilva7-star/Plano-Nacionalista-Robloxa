@@ -9,9 +9,12 @@ Itens.TOKENS_INICIAIS = 25
 Itens.TOKENS_MAXIMOS = 30
 Itens.NIVEIS_POR_TOKEN = 5
 
--- Classes (raridade). "SSE+" = classe EXCLUSIVA. As outras classes o dono ainda vai definir.
+-- Classes (raridade). Uma só classe exclusiva, código "SSE": a MAIS CARA do jogo.
+-- Tudo que é inspirado em anime entra nela (sempre com visual e nome originais).
+-- Na tela aparece "EXCLUSIVO" em cima do item, colorido (arco-íris).
+-- As outras classes o dono ainda vai definir.
 Itens.CLASSES = {
-	["SSE+"] = "Exclusiva",
+	SSE = { nome = "EXCLUSIVO", colorido = true },
 }
 
 -- Ponte: quantos pontos de empurrão valem 1 quadrado
@@ -36,18 +39,32 @@ Itens.lista = {
 		cura = 30, recarga = 15, tempoDeBeber = 1,
 	},
 	EspadaTrovao = {
-		-- Classe exclusiva SSE+ (decisão do dono). Preço: 25.000 Moedas OU 50 Robux.
+		-- Classe EXCLUSIVO (SSE), decisão do dono. Preço: 25.000 Moedas OU 50 Robux.
 		-- recarga = tempo entre um golpe e outro (1 golpe por segundo).
 		-- ATENÇÃO: 150 de empurrão = 7,5 quadrados por golpe, e 45 de dano mata em 3 golpes.
 		-- Muito forte para um item vendido por Robux. Sugestão: empurrao = 30 e dano = 25 no golpe
 		-- normal, e o empurrão grande (150) só numa habilidade com recarga longa.
-		nome = "Espada Trovão", tipo = "arma", classe = "SSE+", tokens = 10,
+		nome = "Espada Trovão", tipo = "arma", classe = "SSE", tokens = 10,
 		empurrao = 150, dano = 45, recarga = 1,
 		preco = { moedas = 25000, robux = 50 },
 		habilidades = {
 			-- PROPOSTA, a confirmar pelo dono (ainda sem código):
 			{ nome = "Investida Trovão", tecla = "E", efeito = "avança para a frente e empurra quem estiver no caminho", recarga = 8 },
 			{ nome = "Corte Lateral", tecla = "R", efeito = "golpe de lado que acerta quem estiver em volta", recarga = 6 },
+		},
+	},
+	BracoAlquimista = {
+		-- Classe EXCLUSIVO (SSE). Inspirado num anime de alquimistas, mas com nome e visual ORIGINAIS.
+		-- Preço, tokens e números ainda a definir pelo dono (é da classe mais cara).
+		-- tokens = 10 é provisório, só para a soma de tokens funcionar.
+		nome = "Braço do Alquimista", tipo = "arma", classe = "SSE", tokens = 10,
+		habilidades = {
+			-- PROPOSTAS (sem código), para o dono escolher:
+			{ nome = "Lâmina de Metal", efeito = "o braço vira uma lâmina: golpes mais fortes por alguns segundos" },
+			{ nome = "Muralha de Pedra", efeito = "bate as mãos no chão e levanta uma parede que bloqueia golpes e empurrões" },
+			{ nome = "Lanças do Chão", efeito = "pontas de pedra saem do chão à frente e empurram quem acertarem" },
+			{ nome = "Troca Equivalente", efeito = "perde um pouco de vida para ganhar força por um tempo" },
+			{ nome = "Reconstruir", efeito = "conserta muros quebrados e quadrados da ponte" },
 		},
 	},
 	MarcaMaldicao = {
