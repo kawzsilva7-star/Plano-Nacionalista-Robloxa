@@ -9,6 +9,11 @@ Itens.TOKENS_INICIAIS = 25
 Itens.TOKENS_MAXIMOS = 30
 Itens.NIVEIS_POR_TOKEN = 5
 
+-- Classes (raridade). "SSE+" = classe EXCLUSIVA. As outras classes o dono ainda vai definir.
+Itens.CLASSES = {
+	["SSE+"] = "Exclusiva",
+}
+
 -- Ponte: quantos pontos de empurrão valem 1 quadrado
 Itens.PONTOS_POR_QUADRADO = 20
 
@@ -29,6 +34,21 @@ Itens.lista = {
 	PocaoCura = {
 		nome = "Poção de Cura", tipo = "consumivel", tokens = 4,
 		cura = 30, recarga = 15, tempoDeBeber = 1,
+	},
+	EspadaTrovao = {
+		-- Classe exclusiva SSE+ (decisão do dono). Preço: 25.000 Moedas OU 50 Robux.
+		-- recarga = tempo entre um golpe e outro (1 golpe por segundo).
+		-- ATENÇÃO: 150 de empurrão = 7,5 quadrados por golpe, e 45 de dano mata em 3 golpes.
+		-- Muito forte para um item vendido por Robux. Sugestão: empurrao = 30 e dano = 25 no golpe
+		-- normal, e o empurrão grande (150) só numa habilidade com recarga longa.
+		nome = "Espada Trovão", tipo = "arma", classe = "SSE+", tokens = 10,
+		empurrao = 150, dano = 45, recarga = 1,
+		preco = { moedas = 25000, robux = 50 },
+		habilidades = {
+			-- PROPOSTA, a confirmar pelo dono (ainda sem código):
+			{ nome = "Investida Trovão", tecla = "E", efeito = "avança para a frente e empurra quem estiver no caminho", recarga = 8 },
+			{ nome = "Corte Lateral", tecla = "R", efeito = "golpe de lado que acerta quem estiver em volta", recarga = 6 },
+		},
 	},
 	MarcaMaldicao = {
 		-- Muito forte, por isso custa 10. Efeito ainda a definir pelo dono.

@@ -241,7 +241,12 @@ Pedido: montar a estrutura do Brasil no Roblox, gigante, com a maioria dos lugar
 | Martelo | arma | 8 | empurrão **40 (2 quadrados)**, dano 20, recarga 8 s, 0,5 s de preparo |
 | **Poção de Cura** (dono) | consumível | 4 | **cura 30**, recarga **15 s** (dono: 10 ou 15), 1 s para beber |
 | **Marca da Maldição** (dono) | habilidade | **10** (muito forte) | efeito ainda a definir pelo dono |
+| **Espada Trovão** (dono) — classe **SSE+ (exclusiva)** | arma | **10** | empurrão **150** (7,5 quadrados), dano **45**, 1 golpe por segundo. Preço: **25.000 Moedas ou 50 Robux** |
 
+- **Classes:** `SSE+` = classe **exclusiva** (dono). As outras classes ainda serão definidas.
+- **Recarga** = tempo entre um uso e outro. Na arma, é o intervalo entre golpes (Espada Trovão: 1 por segundo); na habilidade, é a espera para usar de novo.
+- **Habilidades da arma** (pergunta do dono sobre "combo"): golpe especial numa tecla própria (E, R), com recarga própria. PROPOSTA para a Espada Trovão: **Investida Trovão** (E, avança para a frente e empurra, recarga 8 s) e **Corte Lateral** (R, acerta quem está em volta, recarga 6 s). Combo é outra coisa: sequência de golpes normais em que o último é mais forte.
+- **Alerta de equilíbrio (Espada Trovão):** com 150 de empurrão por golpe, um golpe tira o adversário de quase meia ponte, e 45 de dano mata em 3 golpes. Vendida por Robux, vira "pague para ganhar" (contra a regra de equilíbrio da seção Dinheiro). Sugestão: golpe normal com empurrão 30 e dano 25; o empurrão de 150 só na Investida Trovão. Decisão do dono; por enquanto ficou como ele pediu.
 - Exemplo com 25 tokens: Marca (10) + Martelo (8) + Poção (4) + Soco (2) = 24.
 - Marca da Maldição: o nome é comum, mas o visual deve ser **original** (nada copiado de anime).
 
@@ -249,7 +254,7 @@ Pedido: montar a estrutura do Brasil no Roblox, gigante, com a maioria dos lugar
 - Dono: ponte de 15 a 25 quadrados; cada quadrado custa 20 ou 30 de empurrão. Adotado para teste: **20 quadrados** e **20 pontos de empurrão = 1 quadrado** (`Itens.PONTOS_POR_QUADRADO`).
 - Dono perguntou se o Martelo empurrar 3 quadrados é forte demais: numa ponte de 20, 3 quadrados = 15% da ponte num golpe só. Recomendação: começar com **2 quadrados (40)**, recarga longa (8 s) e 0,5 s de preparo (dá para desviar); se ficar fraco, subir para 3 (60).
 - Opção: empurrão só em quadrados inteiros (`ARREDONDAR = true` em `Ponte.lua`).
-- Código: `Itens.lua` (ModuleScript em ReplicatedStorage), `Ponte.lua` (ModuleScript em ServerScriptService), `Ponte_Teste.lua` (Script de teste: ponte de 20 quadrados ao lado de São Paulo, boneco de treino no quadrado 10, ferramentas Soco/Martelo/Poção).
+- Código: `Itens.lua` (ModuleScript em ReplicatedStorage), `Ponte.lua` (ModuleScript em ServerScriptService), `Ponte_Teste.lua` (Script de teste: ponte de 20 quadrados ao lado de São Paulo, boneco de treino no quadrado 10, ferramentas Soco/Martelo/Poção/Espada Trovão).
 - Falta (dono): o que a Marca da Maldição faz; como se ganha na ponte (empurrar o outro para fora? chegar ao outro lado?); se a ponte é um modo separado ou um lugar do mapa; tela de escolher equipamento.
 
 ### Controles e Configurações (pedido do dono)
