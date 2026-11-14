@@ -229,6 +229,29 @@ Pedido: montar a estrutura do Brasil no Roblox, gigante, com a maioria dos lugar
 - **Decidido (dono):** a divisa entre os estados liberados fica **trancada**; para mudar de cidade o jogador é obrigado a usar o transporte (ônibus de viagem entre SP e Rio, avião para Brasília). A trava será escrita junto com o sistema de transporte.
 - Próximos passos do mapa (a decidir pelo dono): relevo e bioma por região, texturas pixel art nas peças, a cidade de São Paulo em detalhe, aeroportos.
 
+### Tokens de equipamento, itens e a Ponte (ideias do dono)
+**Tokens (limite de equipamento):** cada arma, habilidade ou item custa tokens; o jogador só equipa o que couber no limite (como um "deck").
+- Dono: entre 25 e 30 tokens. Adotado: **começa com 25 e ganha +1 a cada 5 níveis, até 30** (dá motivo para subir de nível).
+- Tabela única em `Itens.lua` (mudar números só lá):
+
+| Item | Tipo | Tokens | Efeito |
+|---|---|---|---|
+| Soco | arma | 2 | empurrão 10 (meio quadrado), dano 8, recarga 0,6 s |
+| Cajado | arma | 4 | empurrão 20 (1 quadrado), dano 12, recarga 1,2 s |
+| Martelo | arma | 8 | empurrão **40 (2 quadrados)**, dano 20, recarga 8 s, 0,5 s de preparo |
+| **Poção de Cura** (dono) | consumível | 4 | **cura 30**, recarga **15 s** (dono: 10 ou 15), 1 s para beber |
+| **Marca da Maldição** (dono) | habilidade | **10** (muito forte) | efeito ainda a definir pelo dono |
+
+- Exemplo com 25 tokens: Marca (10) + Martelo (8) + Poção (4) + Soco (2) = 24.
+- Marca da Maldição: o nome é comum, mas o visual deve ser **original** (nada copiado de anime).
+
+**Ponte (modo de empurrar):** ponte dividida em **quadrados numerados**; cada golpe empurra o adversário alguns quadrados; quem sai da ponte cai.
+- Dono: ponte de 15 a 25 quadrados; cada quadrado custa 20 ou 30 de empurrão. Adotado para teste: **20 quadrados** e **20 pontos de empurrão = 1 quadrado** (`Itens.PONTOS_POR_QUADRADO`).
+- Dono perguntou se o Martelo empurrar 3 quadrados é forte demais: numa ponte de 20, 3 quadrados = 15% da ponte num golpe só. Recomendação: começar com **2 quadrados (40)**, recarga longa (8 s) e 0,5 s de preparo (dá para desviar); se ficar fraco, subir para 3 (60).
+- Opção: empurrão só em quadrados inteiros (`ARREDONDAR = true` em `Ponte.lua`).
+- Código: `Itens.lua` (ModuleScript em ReplicatedStorage), `Ponte.lua` (ModuleScript em ServerScriptService), `Ponte_Teste.lua` (Script de teste: ponte de 20 quadrados ao lado de São Paulo, boneco de treino no quadrado 10, ferramentas Soco/Martelo/Poção).
+- Falta (dono): o que a Marca da Maldição faz; como se ganha na ponte (empurrar o outro para fora? chegar ao outro lado?); se a ponte é um modo separado ou um lugar do mapa; tela de escolher equipamento.
+
 ### Controles e Configurações (pedido do dono)
 - **Correr** segurando a tecla de correr, com **barra de estamina** (amarela; fica vermelha quando cansa). Correr: velocidade 26 (andar: 16). Estamina dura ~4,5 s; recupera depois de 1 s sem correr; cansou, só volta a correr com 25%.
 - **Travar a câmera no boneco** (shift lock próprio do jogo): o boneco vira junto com a câmera e o mouse fica preso no centro. Só muda algo em terceira pessoa. O shift lock padrão do Roblox fica desligado para não brigar com a tecla de correr.
@@ -289,6 +312,7 @@ Pedido: montar a estrutura do Brasil no Roblox, gigante, com a maioria dos lugar
 1. [escrita, falta testar] Dados do jogador e salvamento: `Parte1_Dados.lua` (trocar "Poder" por "Votos" depois)
 2. [escrita, falta testar] Mapa destrutível: `MapaDestrutivel.lua` + `MapaDestrutivel_Teste.lua`
 2b. [escrita, falta testar] Câmera 1ª/3ª pessoa: `Camera.lua`
+2e. [escrita, falta testar] Tokens, itens e Ponte com empurrão: `Itens.lua` + `Ponte.lua` + `Ponte_Teste.lua`
 2d. [escrita, falta testar] Correr com estamina + travar câmera + Configurações: `Configuracoes_Servidor.lua` + `Movimento.lua`
 2c. [escrita, falta testar] Tutorial com opção de desativar: `Tutorial_Servidor.lua` + `Tutorial.lua` (e `Parte1_Dados.lua` atualizado para salvar a escolha)
 3. Partidos: tela de partidos (lista, filiar-se, lotado), escolher time e nascer na base
