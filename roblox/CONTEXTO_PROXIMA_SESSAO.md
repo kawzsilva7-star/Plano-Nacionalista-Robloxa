@@ -6,7 +6,7 @@
 - O Claude não roda o Roblox Studio: escreve em arquivos, o programador testa. Uma parte pequena por vez.
 
 ## Novidades da última sessão
-Ver `roblox/RESUMO_DESTA_SESSAO.md` (configurações, tokens, itens, classe EXCLUSIVO, Espada Trovão, Braço do Alquimista, ponte, mapa e transporte).
+Ver `roblox/RESUMO_DESTA_SESSAO.md` (mapa, cidades, transporte e configurações). As ideias de armas, tokens, classe exclusiva e ponte eram de OUTRO jogo do dono e foram tiradas daqui.
 
 ## Onde está tudo
 Repositório privado `kawzsilva7-star/plano-nacionalista-robloxa`, branch `main`:
@@ -21,7 +21,6 @@ Repositório privado `kawzsilva7-star/plano-nacionalista-robloxa`, branch `main`
 | `MapaDestrutivel.lua` (ModuleScript) + `MapaDestrutivel_Teste.lua` (Script) | ServerScriptService | Muros quebram e voltam quando o jogador morre |
 | `Tutorial_Servidor.lua` + `Tutorial.lua` | Script em ServerScriptService / LocalScript em StarterPlayerScripts | Tutorial que pode ser pulado e desativado |
 | `Configuracoes_Servidor.lua` + `Movimento.lua` | Script em ServerScriptService / LocalScript em StarterPlayerScripts | Correr com estamina, travar câmera (shift lock), tela de Configurações (botão CONFIG ou tecla P) |
-| `Itens.lua` (ModuleScript em ReplicatedStorage) + `Ponte.lua` (ModuleScript) + `Ponte_Teste.lua` (Script) | ServerScriptService (Itens em ReplicatedStorage) | Tokens de equipamento, Poção de Cura, ponte em quadrados com empurrão |
 | `Estilo_Visual.lua` | Script em ServerScriptService (e Lighting > Technology = Future na mão) | Luz de fim de tarde |
 | `mapa/MapaBrasil_Dados.lua` (ModuleScript) + `mapa/MapaBrasil_Construtor.lua` (Script) | ServerScriptService, com StreamingEnabled ligado | Brasil em blocos, só SP, RJ e DF liberados |
 | `Vitrine_Roblox.lua` | Script em ServerScriptService | Testa o cabelo em R6, R15 e Rthro |
