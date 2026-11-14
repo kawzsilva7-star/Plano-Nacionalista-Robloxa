@@ -229,6 +229,18 @@ Pedido: montar a estrutura do Brasil no Roblox, gigante, com a maioria dos lugar
 - **Decidido (dono):** a divisa entre os estados liberados fica **trancada**; para mudar de cidade o jogador é obrigado a usar o transporte (ônibus de viagem entre SP e Rio, avião para Brasília). A trava será escrita junto com o sistema de transporte.
 - Próximos passos do mapa (a decidir pelo dono): relevo e bioma por região, texturas pixel art nas peças, a cidade de São Paulo em detalhe, aeroportos.
 
+### Controles e Configurações (pedido do dono)
+- **Correr** segurando a tecla de correr, com **barra de estamina** (amarela; fica vermelha quando cansa). Correr: velocidade 26 (andar: 16). Estamina dura ~4,5 s; recupera depois de 1 s sem correr; cansou, só volta a correr com 25%.
+- **Travar a câmera no boneco** (shift lock próprio do jogo): o boneco vira junto com a câmera e o mouse fica preso no centro. Só muda algo em terceira pessoa. O shift lock padrão do Roblox fica desligado para não brigar com a tecla de correr.
+- **Configurações** (botão CONFIG no canto ou tecla **P**): o jogador escolhe
+  - Teclas: **SHIFT CORRE / CTRL TRAVA** (padrão) ou **SHIFT TRAVA / CTRL CORRE**;
+  - Correr: ligado/desligado;
+  - Tutorial: ligado/desligado.
+- As escolhas são salvas (Parte1_Dados). No celular aparece um botão **CORRER** na tela.
+- Em primeira pessoa o mouse fica preso; os painéis (tutorial e configurações) soltam o mouse enquanto estão abertos.
+- Código: `Configuracoes_Servidor.lua` (Script) + `Movimento.lua` (LocalScript). Ajustes de velocidade e estamina ficam no começo de `Movimento.lua`.
+- Outros sistemas podem mudar a velocidade base pondo o atributo `VelocidadeBase` no Humanoid (ex.: lentidão de um ataque).
+
 ### Câmera (pedido do dono)
 - Jogo 3D em **primeira pessoa** por padrão, com opção de **terceira pessoa** (câmera atrás do personagem). Tecla **V** alterna.
 - Código: `Camera.lua` (LocalScript). Na terceira pessoa o jogador vê o próprio personagem e as skins; na primeira, só braços e gadget.
@@ -277,6 +289,7 @@ Pedido: montar a estrutura do Brasil no Roblox, gigante, com a maioria dos lugar
 1. [escrita, falta testar] Dados do jogador e salvamento: `Parte1_Dados.lua` (trocar "Poder" por "Votos" depois)
 2. [escrita, falta testar] Mapa destrutível: `MapaDestrutivel.lua` + `MapaDestrutivel_Teste.lua`
 2b. [escrita, falta testar] Câmera 1ª/3ª pessoa: `Camera.lua`
+2d. [escrita, falta testar] Correr com estamina + travar câmera + Configurações: `Configuracoes_Servidor.lua` + `Movimento.lua`
 2c. [escrita, falta testar] Tutorial com opção de desativar: `Tutorial_Servidor.lua` + `Tutorial.lua` (e `Parte1_Dados.lua` atualizado para salvar a escolha)
 3. Partidos: tela de partidos (lista, filiar-se, lotado), escolher time e nascer na base
 3b. Missões: quadro, progresso e recompensas

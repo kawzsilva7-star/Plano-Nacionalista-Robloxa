@@ -90,6 +90,7 @@ criarTexto(painel, "NÃO MOSTRAR MAIS", UDim2.fromOffset(300, 26), UDim2.fromOff
 
 local pular = criarBotao(painel, "PULAR", UDim2.fromOffset(120, 34), UDim2.fromOffset(12, 156))
 local proximo = criarBotao(painel, "PRÓXIMO", UDim2.fromOffset(160, 34), UDim2.new(1, -172, 0, 156))
+proximo.Modal = true -- solta o mouse em primeira pessoa enquanto o painel está aberto
 
 -- Botão "?" (reabre o tutorial quando quiser)
 local ajuda = criarBotao(tela, "?", UDim2.fromOffset(40, 40), UDim2.new(0, 12, 1, -52))

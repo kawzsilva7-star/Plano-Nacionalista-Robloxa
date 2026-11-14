@@ -40,6 +40,9 @@ local function aoEntrar(player)
 	-- Preferências do tutorial (a tela lê estes atributos)
 	player:SetAttribute("TutorialAtivo", true)
 	player:SetAttribute("TutorialFeito", false)
+	-- Configurações de controle (padrão: Shift corre, Ctrl trava a câmera; correr ligado)
+	player:SetAttribute("CfgTeclas", "ShiftCorre")
+	player:SetAttribute("CfgCorrer", true)
 
 	if ok then
 		if dados then
@@ -50,6 +53,12 @@ local function aoEntrar(player)
 			end
 			if typeof(dados.TutorialFeito) == "boolean" then
 				player:SetAttribute("TutorialFeito", dados.TutorialFeito)
+			end
+			if dados.CfgTeclas == "ShiftCorre" or dados.CfgTeclas == "ShiftTrava" then
+				player:SetAttribute("CfgTeclas", dados.CfgTeclas)
+			end
+			if typeof(dados.CfgCorrer) == "boolean" then
+				player:SetAttribute("CfgCorrer", dados.CfgCorrer)
 			end
 		end
 		carregou[player] = true
@@ -70,6 +79,8 @@ local function salvar(player)
 		Moedas = pasta.Moedas.Value,
 		TutorialAtivo = player:GetAttribute("TutorialAtivo") ~= false,
 		TutorialFeito = player:GetAttribute("TutorialFeito") == true,
+		CfgTeclas = player:GetAttribute("CfgTeclas") or "ShiftCorre",
+		CfgCorrer = player:GetAttribute("CfgCorrer") ~= false,
 	}
 	local ok = tentar(function()
 		store:SetAsync("J_" .. player.UserId, dados)
